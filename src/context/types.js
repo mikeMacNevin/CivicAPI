@@ -1,0 +1,1 @@
+export const SEARCH_ADDRESS = 'SEARCH_ADDRESS';
