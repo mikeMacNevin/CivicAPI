@@ -8,6 +8,7 @@ const AddressForm = () => {
     
     const [text, setText] = useState('')
     
+    //
     const onSubmit = e => {
         e.preventDefault()
         if (text === '') {
@@ -15,11 +16,12 @@ const AddressForm = () => {
         } else {
             googleCivicContext.searchAddress(text)
             setText('')
-            console.log("hello")
+            console.log("AddressForm: Address Input Submitted")
 
         }
     }
 
+    // change the state of 'text' from text input bar
     const onChange = e => setText(e.target.value)
 
  

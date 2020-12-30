@@ -7,8 +7,9 @@ const Splash = () => {
     return (
 
         <div className="Splash">
-            <div className="SplashImage text-center">
-                <h1 className="text-white text-center">WhoRepsYou?</h1>
+            <div className="SplashImage text-center text-white">
+                <h1 >Who</h1>
+                <h2>Represents You?</h2>
                 <AddressForm />
 
             </div>

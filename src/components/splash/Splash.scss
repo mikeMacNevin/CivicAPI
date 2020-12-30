@@ -26,6 +26,12 @@
             background: transparent;
             margin-top: 1rem;
             border-color: white;
+            input {
+                background-color: transparent;
+                border: none;
+                color: white ;;
+
+            }
         }
         button:active, button:hover {
             background-color:hsl(280, 77%, 41%);
