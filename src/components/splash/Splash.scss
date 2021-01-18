@@ -1,4 +1,13 @@
 .SplashImage{
+
+    h1 {
+        font-size: 4rem;
+
+    }
+    h2 {
+        font-size: 3rem;
+    }
+
     min-height: 50vh;
     min-width: 100%;
     background:  url('/assets/congress.jpg') hsla(280, 77%, 41%, 0.8);
@@ -15,30 +24,7 @@
         min-width: 100%;
     }
 
-    form {
-        display: flex;
-        flex-direction: column;
-        input {
-            text-align: center;
-        }
-
-        button {
-            background: transparent;
-            margin-top: 1rem;
-            border-color: white;
-            input {
-                background-color: transparent;
-                border: none;
-                color: white ;;
-
-            }
-        }
-        button:active, button:hover {
-            background-color:hsl(280, 77%, 41%);
-            border-color: hsl(280, 77%, 41%);
-
-        }
-    }
+    
 
     
 }

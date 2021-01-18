@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react'
 import GoogleCivicContext from '../../context/civic/googleCivicContext'
 import GoogleCivicState from '../../context/civic/GoogleCivicState'
+import './Rep.scss';
 
 const AddressForm = () => {
 
@@ -26,8 +27,7 @@ const AddressForm = () => {
 
  
     return (
-        <div>
-            <form onSubmit={onSubmit} className="form-inline">
+            <form onSubmit={onSubmit} className="form">
                 <input 
                     type="text" 
                     className="form-control" 
@@ -39,11 +39,10 @@ const AddressForm = () => {
                 <button className="btn btn-primary mb-2">
                 <input
                     type='submit'
-                    value='AddressForm'
+                    value='Search'
                 />
                 </button>
             </form>
-        </div>
     )
 }
 

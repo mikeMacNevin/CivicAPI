@@ -4,21 +4,35 @@ import { Link } from 'react-router-dom';
 import GoogleCivicContext from '../../context/civic/googleCivicContext';
 
 import Rep from './Rep'
+import AddressForm from './AddressForm';
 
-const Reps = () => {
+
+const Reps = (props) => {
     const googleCivicContext = useContext(GoogleCivicContext)
-    const { reps } = googleCivicContext;
+    const { reps, searchAddress } = googleCivicContext;
     
+    const officials = reps.officials;
+    
+    if (reps.officials == undefined) {
+      console.log("no reps")
 
+      return (
+        <div>
+              <AddressForm />
 
-    console.log(JSON.stringify(reps.data));
-
-    return (
-       <div className="rep-container">
-         {/* {reps.map(reps => (
-           <Rep key={reps.name} reps={reps} />
-         ))} */}
-       </div>
+        </div>
+      )
+    } else {
+      console.log("reps filled")
+    return (      
+    <div>      
+        <div className="rep-container">
+          {officials.map(rep => (
+              <Rep key={rep.id} rep={rep}/>
+            ))}
+        </div>
+    </div>
     )
+          }
 }
 export default Reps;

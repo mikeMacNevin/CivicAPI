@@ -10,7 +10,7 @@ import {
 
 const GoogleCivicState = props => {
     const initialState = {
-        reps: {}
+        reps: []
     }
 
     const [state, dispatch] = useReducer(GoogleCivicReducer, initialState);
@@ -21,10 +21,10 @@ const GoogleCivicState = props => {
         `https://www.googleapis.com/civicinfo/v2/representatives?key=AIzaSyA-alrA4NG9OOesuE1PE-Bb4Cpduujf0Hg&address=${text}&electionId=2000"}`
     )
     dispatch({
-        SEARCH_ADDRESS,
-        payload:res.data
+        type: SEARCH_ADDRESS,
+        payload: res.data
     })
-    console.log("GoogleCivicState: " + JSON.stringify(res.data.offices))
+    console.log("GoogleCivicState res.data.offices[0]: " + JSON.stringify(res.data.offices[0]))
 }
 
 return (
