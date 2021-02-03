@@ -11,8 +11,11 @@ const Reps = (props) => {
     const googleCivicContext = useContext(GoogleCivicContext)
     const { reps, searchAddress } = googleCivicContext;
     
+    // const offices = reps.offices;
     const officials = reps.officials;
-    
+    const offices = reps.offices;
+
+
     if (reps.officials == undefined) {
       console.log("no reps")
 
@@ -24,15 +27,15 @@ const Reps = (props) => {
       )
     } else {
       console.log("reps filled")
-    return (      
-    <div>      
-        <div className="rep-container">
-          {officials.map(rep => (
-              <Rep key={rep.id} rep={rep}/>
-            ))}
-        </div>
-    </div>
-    )
-          }
+      return (      
+      <div>      
+          <div className="rep-container">
+            {officials.map(rep => (
+                <Rep key={rep.id} rep={rep}/>
+              ))}
+          </div>
+      </div>
+      )
+    }
 }
 export default Reps;

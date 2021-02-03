@@ -1,0 +1,83 @@
+{
+  "normalizedInput": {
+    "line1": "2665 Prosperity Avenue",
+    "city": "Fairfax",
+    "state": "VA",
+    "zip": ""
+  },
+  "kind": "civicinfo#representativeInfoResponse",
+  "divisions": {
+    "ocd-division/country:us/state:va/county:fairfax": {
+      "name": "Fairfax County",
+      "officeIndices": [
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "ocd-division/country:us": {
+      "name": "United States",
+      "officeIndices": [
+        0,
+        1
+      ]
+    },
+    "ocd-division/country:us/state:va/cd:11": {
+      "name": "Virginia's 11th congressional district",
+      "officeIndices": [
+        3
+      ]
+    },
+    "ocd-division/country:us/state:va": {
+      "name": "Virginia",
+      "officeIndices": [
+        2,
+        4,
+        5,
+        6
+      ]
+    }
+  },
+  "offices": [
+    {
+      "name": "President of the United States",
+      "divisionId": "ocd-division/country:us",
+      "levels": [
+        "country"
+      ],
+      "roles": [
+        "headOfState",
+        "headOfGovernment"
+      ],
+      "officialIndices": [
+        0
+  ],
+  "officials": [
+    {
+      "name": "Joseph R. Biden",
+      "address": [
+        {
+          "line1": "1600 Pennsylvania Avenue Northwest",
+          "city": "Washington",
+          "state": "DC",
+          "zip": "20500"
+        }
+      ],
+      "party": "Democratic Party",
+      "phones": [
+        "(202) 456-1111"
+      ],
+      "urls": [
+        "https://www.whitehouse.gov/"
+      ],
+      "channels": [
+        {
+          "type": "Twitter",
+          "id": "potus"
+        }
+      ]
+  
+}
+
+
