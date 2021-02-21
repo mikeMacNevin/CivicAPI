@@ -1,12 +1,14 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import GoogleCivicContext from '../../context/civic/googleCivicContext';
 
 
 const Rep = ( {rep } ) => {
 
-const {name, address, party, phone, url, channels, officeName, level,line1, city, state, zip } = rep
+const {name,  party, phone, url, officeName, } = rep
 
+// keep these 
+// address, channels, level, line1, city, state, zip 
 
     return (
 
