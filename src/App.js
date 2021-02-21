@@ -1,6 +1,7 @@
 import Splash from './components/splash/Splash';
-import GoogleCivicState from './context/civic/GoogleCivicState'
 import Reps from './components/reps/Reps'
+
+import GoogleCivicState from './context/civic/GoogleCivicState'
 
 import AddressForm from './components/reps/AddressForm'
 function App() {
