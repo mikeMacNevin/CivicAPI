@@ -1,5 +1,5 @@
 import Splash from './components/splash/Splash';
-import Reps from './components/reps/Reps'
+import Reps from './components/reps/reps'
 
 import GoogleCivicState from './context/civic/GoogleCivicState'
 
