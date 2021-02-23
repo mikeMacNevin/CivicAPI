@@ -15,9 +15,8 @@ const Reps = (props) => {
     // const officials = reps.officials;
 
 
-      if (reps[0] == undefined) {
+      if (reps[0] === undefined) {
         console.log("no reps")
-
         return (
           <div>
                 <AddressForm />
@@ -46,21 +45,24 @@ const Reps = (props) => {
                     {/* {reps.map(rep => (
                         <Rep key={rep.id} rep={rep}/>
                       ))} */}
-                      {reps.filter(x => x.level == "country").map(rep => (
+                      {reps.filter(x => x.level === "country").map(rep => (
                         <Rep key={rep.id} rep={rep}/>
                       ))}
-
+                      {console.log("country level")}
                   </div>
                 <div class="tab-pane fade" id="state" role="tabpanel" aria-labelledby="state-tab">
                   {reps.filter(x => x.level == "administrativeArea1").map(rep => (
                           <Rep key={rep.id} rep={rep}/>
                         ))}
+                      {console.log("state level")}
 
                 </div>
                 <div class="tab-pane fade" id="local" role="tabpanel" aria-labelledby="local-tab">
-                {reps.filter(x => x.level == "administrativeArea2").map(rep => (
+                {reps.filter(x => x.level == "administrativeArea2" || "locality").map(rep => (
                           <Rep key={rep.id} rep={rep}/>
                         ))}
+                  {console.log("local level")}
+
                 </div>
             </div>
           </div>

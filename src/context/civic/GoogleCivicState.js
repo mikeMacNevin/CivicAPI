@@ -46,13 +46,13 @@ return (
     )
 }
 
+//check resData
 var repTest = (resData) => {
 
     var repArr = []
     let obj ={}
     let i;
     let officesCount = 0
-
 
     if (resData.offices && resData.officials) {
         // count how many offices
@@ -116,14 +116,16 @@ var repTest = (resData) => {
 
         } 
 
-        
-        for (const [key, value] of Object.entries(resData.divisions)) {
-            value.officeIndices.forEach( (x, y) => {
-                console.log(x)
-                repArr[x].officeDivName = ""
-              repArr[x].officeDivName = value.name
-            })
-        }
+        // for doing office div name - might not be needed 
+        // for (const [value] of Object.entries(resData.divisions)) {
+        //     if (value.officeIndices) {
+        //     value.officeIndices.forEach( (x, y) => {
+        //         console.log(x)
+        //         repArr[x].officeDivName = ""
+        //         repArr[x].officeDivName = value.name
+        //     })
+        //     }
+        // }
 
         console.log(repArr)
 
