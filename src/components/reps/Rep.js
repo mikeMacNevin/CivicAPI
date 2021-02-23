@@ -8,7 +8,7 @@ const Rep = ( {rep } ) => {
 const {name,  party, phone, url, officeName, } = rep
 
 // keep these 
-// address, channels, level, line1, city, state, zip 
+// address, channels, level,line1, city, state, zip 
 
     return (
 
