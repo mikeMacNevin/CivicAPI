@@ -1,15 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import GoogleCivicContext from '../../context/civic/googleCivicContext';
+import { Link } from 'react-router-dom';
 
 
 const Rep = ( {rep } ) => {
 
-const {name,  party, phone, url, officeName, } = rep
+    const {name,  party, phone, url, officeName, } = rep
 
 // keep these 
 // address, channels, level,line1, city, state, zip 
-
+    console.log(rep)
     return (
 
         <div className="Rep mx-auto mt-4">
@@ -22,7 +23,7 @@ const {name,  party, phone, url, officeName, } = rep
                 <p className="mb-0">{phone}</p>
             </div>
             <div className="d-flex justify-content-between align-items-center">
-            <a href={url}>Website</a>
+            <Link to={`rep/${name}`}>View Official</Link>
                 <p className="mb-0">{}</p>
             </div>
             {/* <img src ={photoUrl}></img> */}

@@ -41,7 +41,7 @@ const Reps = (props) => {
               </ul>
               <div class="tab-content px-1" id="myTabContent">
                 <div class="tab-pane fade show active" id="national" role="tabpanel" aria-labelledby="national-tab">
-
+                    
                     {/* {reps.map(rep => (
                         <Rep key={rep.id} rep={rep}/>
                       ))} */}
@@ -58,7 +58,7 @@ const Reps = (props) => {
 
                 </div>
                 <div class="tab-pane fade" id="local" role="tabpanel" aria-labelledby="local-tab">
-                {reps.filter(x => x.level == "administrativeArea2" || "locality").map(rep => (
+                {reps.filter(x => (x.level == "administrativeArea2" || x.level =="locality")).map(rep => (
                           <Rep key={rep.id} rep={rep}/>
                         ))}
                   {console.log("local level")}

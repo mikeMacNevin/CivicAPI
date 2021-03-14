@@ -28,10 +28,10 @@ const RepTest = (resData) => {
     resData.officials.forEach( (e, j) => {
         // add social media channels
         if (e.channels) {
-        repArr[j].channels = []
-        e.channels.forEach( (f, k) => {
+            repArr[j].channels = []
+            e.channels.forEach( (f, k) => {
             if (f['id']) {
-            repArr[j].channels.push({"type" :`${f.type}.com/${f.id}` })
+                repArr[j].channels.push({"type" :`${f.type}.com/${f.id}` })
             }
         })
         }
@@ -39,25 +39,22 @@ const RepTest = (resData) => {
         repArr[j].name = e.name
         // add address if exists
         if (e.address) {
-        repArr[j].address = e.address[0]
+            repArr[j].address = e.address[0]
         }
         // add political party
         repArr[j].party = e.party
         // add phone if exists
         if (e.phones[0].length > 0) {
-        repArr[j].phone = e.phones[0]
+            repArr[j].phone = e.phones[0]
         }
         // add website url
         if(e.urls[0].length > 0) {
         repArr[j].url = e.urls[0]
         }
-
         // if photo url
         if (e.photoUrl) {
         repArr[j].photoUrl = e.photoUrl
         }
-
-
         return repArr
         }) 
 

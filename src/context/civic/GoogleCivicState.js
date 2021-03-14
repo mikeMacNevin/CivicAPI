@@ -98,8 +98,10 @@ var repTest = (resData) => {
             // add political party
             repArr[j].party = resData.officials[j].party
             // add phone if exists
-            if (resData.officials[j].phones[0].length > 0) {
-            repArr[j].phone = resData.officials[j].phones[0]
+            if (resData.officials[j].phones) {
+                if (resData.officials[j].phones[0].length > 0) {
+                    repArr[j].phone = resData.officials[j].phones[0]
+                }
             }
             // add website url
             if(resData.officials[j].urls) {

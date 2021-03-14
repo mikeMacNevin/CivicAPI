@@ -25,6 +25,19 @@ form {
     }
 }
 
+
+#myTabContent {
+    border-left: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+
+}
+
+@media screen and (max-width: 576px) {
+    #myTabContent {
+        padding: 0 15px;
+    }
+}
+
 td {
     padding: 0 0.5rem; 
 }
