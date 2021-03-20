@@ -14,20 +14,23 @@ const Rep = ( {rep } ) => {
     return (
 
         <div className="Rep mx-auto mt-4">
-            <div className="d-flex justify-content-between align-items-center">
-                <h2>{name}</h2>
-                <p className="mb-0">{officeName}</p>
+            <div className=" text-center">
+                <p className="mb-0 under">{officeName}</p>
             </div>
             <div className="d-flex justify-content-between align-items-center">
-                <p className="mb-0">{party}</p>
-                <p className="mb-0">{phone}</p>
+                <div>
+                <p className="mb-0">{name}</p>
+                <p className="mb-0 second">{party}</p>
+                </div>
+                <Link to={`rep/${name}`}>
+                    <button type="button" className="btn btn-outline-primary btn">View</button>
+                </Link>
+
             </div>
             <div className="d-flex justify-content-between align-items-center">
-            <Link to={`rep/${name}`}>View Official</Link>
-                <p className="mb-0">{}</p>
+          
             </div>
             {/* <img src ={photoUrl}></img> */}
-            <hr /> 
         </div>
 
     )

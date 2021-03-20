@@ -13,7 +13,7 @@ const Reps = (props) => {
     
     // const offices = reps.offices;
     // const officials = reps.officials;
-
+    console.log("reps: " + JSON.stringify(reps))
 
       if (reps[0] === undefined) {
         console.log("no reps")
@@ -27,7 +27,7 @@ const Reps = (props) => {
         console.log("reps filled")
         return (   
           <div className = "row">   
-            <div className="rep-container col-12 col-md-6 mx-auto">            
+            <div className="rep-container col-12 col-md-4 mx-auto mt-3">            
               <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
                 <li class="nav-item">
                   <a class="nav-link active" id="national-tab" data-toggle="tab" href="#national" role="tab" aria-controls="national" aria-selected="true">National</a>

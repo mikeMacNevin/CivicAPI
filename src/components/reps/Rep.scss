@@ -27,9 +27,19 @@ form {
 
 
 #myTabContent {
-    border-left: 1px solid #dee2e6;
-    border-right: 1px solid #dee2e6;
+    // border-left: 1px solid #dee2e6;
+    // border-right: 1px solid #dee2e6;
 
+}
+
+.Rep {
+    .under {
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    .second {
+        font-size: 0.7rem;
+    }
 }
 
 @media screen and (max-width: 576px) {
