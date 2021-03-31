@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react'
+import React, {useContext, useDebugValue, useEffect, useState} from 'react'
 import PropTypes from 'prop-types'
 import GoogleCivicContext from '../../context/civic/googleCivicContext'
 
@@ -14,24 +14,73 @@ const RepPage = ({match}) => {
     // get specific representative name
     let repname = match.params.repname
 
-    // isolate this representative's data
-    // let thisRep;
+    // 
+    let repHolder;
 
     // get rep info based on name
     useEffect(() => {
+        
         for (let i = 0; i < reps.length; i++) {
             if (reps[i].name == repname) {
-                thisRep = reps[i]
-                setThisRep(thisRep)
+                repHolder = reps[i]
+                console.log("thisRep: " + JSON.stringify(repHolder));
+                // BREAKUP "CHANNELS" (URLs)
+                if (reps[i].channels) {
+                    reps[i].channels.forEach(element => {
+                        // TWITTER
+                        if (element.type.toLowerCase().indexOf('twitter.com') > -1) {
+                            repHolder.twitterUrl = "https:" + element.type
+                        }
+                        // YOUTUBE
+                        if (element.type.toLowerCase().indexOf('youtube.com') > -1) {
+                            repHolder.facebookUrl = "https:" + element.type
+                        }
+                        // FACEBOOK
+                        if (element.type.toLowerCase().indexOf('facebook.com') > -1) {
+                            repHolder.youtubeUrl = "https:" + element.type
+                        }
+                    });
+                }
+                setThisRep(repHolder)
+                repname = '';
             }
         }
-     }, [repname])
+     }, [])
 
-    console.log("thisRep: " + JSON.stringify(thisRep));
+     const {
+        officeName,
+        url,
+        channels,
+        twitterUrl,
+        facebookUrl,
+        youtubeUrl
+     } = thisRep;
 
     return (
-        <div>
-            {repname}
+        <div className="container text-center mt-3">
+            <h2>{repname}</h2>
+            <p>{officeName}</p>
+            {url && 
+            <a id="repWebsiteButton" target="_blank" href={url} >
+                <button className="btn mx-1 btn-dark website-button">Website</button>
+            </a>
+            }
+            { twitterUrl &&
+                <a id="button "target="_blank" href={twitterUrl} >    
+                    <button className="btn mx-1 twitter-button"> <i class="fab fa-twitter"></i> Twitter</button>
+                </a> 
+            }
+            { facebookUrl &&
+                <a id="button "target="_blank" href={facebookUrl} >    
+                    <button className="btn mx-1 facebook-button"> <i class="fab fa-facebook"></i> Facebook</button>
+                </a> 
+            }
+            { youtubeUrl &&
+                <a id="button "target="_blank" href={youtubeUrl} >    
+                    <button className="btn mx-1 youtube-button"> <i class="fab fa-youtube"></i> Youtube</button>
+                </a> 
+            }
+
         </div>
     );
 }

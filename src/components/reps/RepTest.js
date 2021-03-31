@@ -2,7 +2,6 @@ const RepTest = (resData) => {
 
     var repArr = []
 
-
     let obj ={}
     let i;
     let officesCount = 0
