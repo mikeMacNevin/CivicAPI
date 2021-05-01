@@ -10,7 +10,7 @@ const Rep = ( {rep } ) => {
 
 // keep these 
 // address, channels, level,line1, city, state, zip 
-    console.log(rep)
+    console.log("Rep: " + rep)
     return (
 
         <div className="Rep mx-auto mt-4">

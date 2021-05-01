@@ -1,12 +1,14 @@
 import Splash from './components/splash/Splash';
 import Reps from './components/reps/reps'
-import RepPage from './components/reps/RepPage'
+import RepPage from './components/reps/RepPage/RepPage'
 import GoogleCivicState from './context/civic/GoogleCivicState'
 
 import AddressForm from './components/reps/AddressForm'
 
 import {BrowserRouter as Router} from 'react-router-dom';
 import Route from 'react-router-dom/Route';
+
+import './index.scss';
 
 function App() {
   return (

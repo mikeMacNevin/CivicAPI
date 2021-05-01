@@ -1,21 +1,21 @@
-form {
+.address-form {
+    text-align: center;
     display: flex;
     flex-direction: column;
-    width:50%;
+    width:40%;
     margin: 3rem auto;
     input {
         text-align: center;
     }
 
     button {
-        background: transparent;
         margin-top: 1rem;
         border-color: white;
+        width:100%;
         input {
             background-color: transparent;
             border: none;
-            color: white ;;
-
+            color: white ;
         }
     }
     button:active, button:hover {
@@ -42,9 +42,21 @@ form {
     }
 }
 
+@media screen and (max-width: 768px) {
+    #myTabContent {
+        padding: 0 15px;
+    }
+    .address-form {
+        width:80%
+    }
+}
+
 @media screen and (max-width: 576px) {
     #myTabContent {
         padding: 0 15px;
+    }
+    .address-form {
+        width:90%;
     }
 }
 

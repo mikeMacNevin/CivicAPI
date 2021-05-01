@@ -27,22 +27,25 @@ const AddressForm = () => {
 
  
     return (
-        <form onSubmit={onSubmit} className="form">
-            <input 
-                type="text" 
-                className="form-control" 
-                id="addressInput"
-                placeholder="123 your street, state" 
-                value={text}
-                onChange={onChange} 
-            />
-            <button className="btn btn-primary mb-2">
-            <input
-                type='submit'
-                value='Search'
-            />
-            </button>
-        </form>
+        <div className="address-form">
+            <h2>Enter Your Home Address</h2>
+            <form onSubmit={onSubmit} className="form">
+                <input 
+                    type="text" 
+                    className="form-control" 
+                    id="addressInput"
+                    placeholder="123 your street, state" 
+                    value={text}
+                    onChange={onChange} 
+                />
+                <button className="btn btn-primary mb-2">
+                <input
+                    type='submit'
+                    value='Search'
+                />
+                </button>
+            </form>
+        </div>
     )
 }
 
