@@ -22,7 +22,7 @@ import GoogleCivicContext from '../../../context/civic/googleCivicContext'
             <Fragment>
                 {repSocial.url && 
                 <a id="repWebsiteButton" target="_blank" href={repSocial.url} >
-                    <button className="btn mx-1 btn-dark website-button"><i class="far fa-browser"></i>Website</button>
+                    <button className="btn mx-1 btn-dark website-button"><i class="fas fa-globe"></i> Website</button>
                 </a>
                 }
                 {repSocial.twitterUrl &&

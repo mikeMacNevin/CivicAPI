@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Rep = ( {rep } ) => {
 
-    const {name,  party, phone, url, officeName, } = rep
+    const {name,  party, phone, url, officeName, photoUrl, stateId} = rep
 
 // keep these 
 // address, channels, level,line1, city, state, zip 

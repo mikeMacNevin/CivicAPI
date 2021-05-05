@@ -54,13 +54,15 @@ var repTest = (resData) => {
     let i;
     let officesCount = 0
     
-    console.log("resDate: " + JSON.stringify(resData))
+    console.log("GoogleCivicState resData: " + JSON.stringify(resData))
 
     if (resData.offices && resData.officials) {
-        // count how many offices
+
+
 
         // offices
         for (i = 0; i < resData.offices.length; i++) {
+
             // *add name* 
             obj.officeName = resData.offices[i].name
             // *add  level* 
@@ -70,6 +72,9 @@ var repTest = (resData) => {
                 obj = {}
                 obj.officeName = resData.offices[i].name
                 obj.level = resData.offices[i].levels[0]
+
+                //stateId for Open Secrets API
+                obj.stateId = resData.normalizedInput.state
                 repArr.push(obj)
             })
             // clear obj 
@@ -111,25 +116,14 @@ var repTest = (resData) => {
                 repArr[j].url = resData.officials[j].urls[0]
             }
 
-            // if photo url
-            // if (resData.officials[j].photoUrl) {
-            // repArr[j].photoUrl = resData.officials[j].photoUrl
-            // }
+            if (resData.officials[j].photoUrl) {
+            repArr[j].photoUrl = resData.officials[j].photoUrl
+            }
 
-            
 
         } 
 
-        // for doing office div name - might not be needed 
-        // for (const [value] of Object.entries(resData.divisions)) {
-        //     if (value.officeIndices) {
-        //     value.officeIndices.forEach( (x, y) => {
-        //         console.log(x)
-        //         repArr[x].officeDivName = ""
-        //         repArr[x].officeDivName = value.name
-        //     })
-        //     }
-        // }
+  
 
         console.log(repArr)
 

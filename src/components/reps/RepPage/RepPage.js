@@ -4,7 +4,8 @@ import GoogleCivicContext from '../../../context/civic/googleCivicContext'
 
 import {BrowserRouter as Router, Link} from 'react-router-dom'
 import SocialChannels from './SocialChannels'
-
+import Twitter from './Twitter'
+import RepImage from './RepImage'
 
 
 const RepPage = ({match}) => {
@@ -59,17 +60,24 @@ const RepPage = ({match}) => {
         channels,
         twitterUrl,
         facebookUrl,
-        youtubeUrl
+        youtubeUrl,
+        party,
+        photoUrl,
+        phone,
+        stateId
      } = thisRep;
+
+     console.log("RepPage: thisRep: " + JSON.stringify(thisRep))
 
     return (
         <div className="container text-center mt-3">
             <h2>{repname}</h2>
             <h5><i>{officeName}</i></h5>
-
-            <p>Political Party: {}</p>
+            <RepImage photoUrl={photoUrl}></RepImage>
+            <p className="pb-1">{party}</p>
+            <p>Office: {phone}</p>
             <SocialChannels repSocial={thisRep}></SocialChannels>
-
+            <Twitter twitter={twitterUrl}></Twitter>
         </div>
     );
 }
