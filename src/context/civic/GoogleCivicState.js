@@ -3,6 +3,7 @@ import axios from 'axios'
 import GoogleCivicContext from './googleCivicContext'
 import GoogleCivicReducer from './googleCivicReducer'
 
+import proPublica from ' ./propublica/propublica.js'
 
 import {
     SEARCH_ADDRESS
@@ -22,7 +23,6 @@ const GoogleCivicState = props => {
     const res = await axios.get(
         `https://www.googleapis.com/civicinfo/v2/representatives?key=AIzaSyA-alrA4NG9OOesuE1PE-Bb4Cpduujf0Hg&address=${text}`
     )
-
     
    dispatch({
         type: SEARCH_ADDRESS,
@@ -47,6 +47,9 @@ return (
 }
 
 //check resData
+
+
+
 var repTest = (resData) => {
 
     var repArr = []
@@ -56,13 +59,11 @@ var repTest = (resData) => {
     
     console.log("GoogleCivicState resData: " + JSON.stringify(resData))
 
+
+    proPublica()
     if (resData.offices && resData.officials) {
-
-
-
         // offices
         for (i = 0; i < resData.offices.length; i++) {
-
             // *add name* 
             obj.officeName = resData.offices[i].name
             // *add  level* 
@@ -115,24 +116,14 @@ var repTest = (resData) => {
                 console.log(resData.officials[j].urls[0])
                 repArr[j].url = resData.officials[j].urls[0]
             }
-
             if (resData.officials[j].photoUrl) {
             repArr[j].photoUrl = resData.officials[j].photoUrl
             }
-
-
         } 
-
-  
-
         console.log(repArr)
-
+        
         return repArr
-
         }
-
     }
-
-
 
 export default GoogleCivicState;
