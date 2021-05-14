@@ -8,7 +8,7 @@ export default function repTest(resData) {
     let officesCount = 0
     
     // console.log("GoogleCivicState resData: " + JSON.stringify(resData))
-    console.log('reeeeepppp tteeeessstttt')
+    console.log('reeeeepppp tteeestttt')
 
     if (resData.offices && resData.officials) {
         // offices
@@ -40,7 +40,7 @@ export default function repTest(resData) {
                     if (f['id']) {
                         repArr[j].channels.push({"type" :`${f.type}.com/${f.id}` })
                     }
-            })
+                })
             }
             // *add name*
             repArr[j].name = resData.officials[j].name
@@ -50,7 +50,6 @@ export default function repTest(resData) {
                 repArr[j].line1 = resData.officials[j].address[0].city;
                 repArr[j].line1 = resData.officials[j].address[0].state;
                 repArr[j].line1 = resData.officials[j].address[0].zip;
-
             }
             // *add political party*
             repArr[j].party = resData.officials[j].party
@@ -65,7 +64,7 @@ export default function repTest(resData) {
                 repArr[j].url = resData.officials[j].urls[0]
             }
             if (resData.officials[j].photoUrl) {
-            repArr[j].photoUrl = resData.officials[j].photoUrl
+                repArr[j].photoUrl = resData.officials[j].photoUrl
             }
 
             if(j == resData.officials.length - 1 ) {
@@ -74,13 +73,10 @@ export default function repTest(resData) {
                     repArr.push(e)
                     console.log("googlereps.js propublica then e:" + JSON.stringify(e))
                     console.log("googlereps.js propublica then repArr:" + JSON.stringify(repArr))
-
-
                 }).catch(error => {
                     console.log("pro error: " + error)
                 })
-
-                }
+            }
                
         } //end for
         return repArr
