@@ -24,11 +24,12 @@ const GoogleCivicState = props => {
     const res = await axios.get(
         `https://www.googleapis.com/civicinfo/v2/representatives?key=AIzaSyA-alrA4NG9OOesuE1PE-Bb4Cpduujf0Hg&address=${text}`
     )
+        console.log("res.data: " + JSON.stringify(repTest(res.data)))
     
    dispatch({
         type: SEARCH_ADDRESS,
         // payload: res.data
-        payload: repTest(res.data)
+        payload:repTest(res.data)
     })
    
     // console.log("GoogleCivicState res.data: " + JSON.stringify(res.data))

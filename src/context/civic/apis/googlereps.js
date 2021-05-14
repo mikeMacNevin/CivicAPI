@@ -1,7 +1,7 @@
 import proPublica  from "./propublica";
 
 export default function repTest(resData) {
-
+    var newRepArr = []
     var repArr = []
     let obj ={}
     let i;
@@ -67,23 +67,36 @@ export default function repTest(resData) {
             if (resData.officials[j].photoUrl) {
             repArr[j].photoUrl = resData.officials[j].photoUrl
             }
-        } 
-        
-        // let newRepArr = []
-        // proPublica(resData).then(resp => {
-        //     console.log("da resp: " + JSON.stringify(resp))
-        //     newRepArr.push(resp);
 
-        //     console.log("inner newRepArr: " + JSON.stringify(newRepArr))
+            if(j == resData.officials.length - 1 ) {
+                console.log("******************************")
+                    proPublica(resData).then(function(e) {
+                    repArr.push(e)
+                    console.log("googlereps.js propublica then e:" + JSON.stringify(e))
+                    console.log("googlereps.js propublica then repArr:" + JSON.stringify(repArr))
 
-        // })
+
+                }).catch(error => {
+                    console.log("pro error: " + error)
+                })
+
+                }
+               
+        } //end for
+        return repArr
+    } //end if
+
+
+
+
+
         // console.log("mikes newRepArr: " + newRepArr)
         // console.log("mikes repArr array? " + Array.isArray(newRepArr))
         // // return newRepArr;
         // console.log("proPublica: " + proPublica(resData))
 
         // console.log("final repArr: " + JSON.stringify(repArr))
-        return repArr
-        }
-    }
+        // return repArr
+
+}
 

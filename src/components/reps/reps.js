@@ -9,12 +9,12 @@ import RepNav from './RepNav';
 // import { waitForDomChange } from '@testing-library/react';
 
 const Reps = (props) => {
+
     const googleCivicContext = useContext(GoogleCivicContext)
     const { reps, searchAddress } = googleCivicContext;
     
-    console.log("reps.js: " + JSON.stringify(reps))
 
-      if (reps[0] === undefined) {
+      if (reps.length < 3) {
         return (
           <div>
                 <AddressForm />

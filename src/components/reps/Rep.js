@@ -3,13 +3,12 @@ import PropTypes from 'prop-types'
 import GoogleCivicContext from '../../context/civic/googleCivicContext';
 import { Link } from 'react-router-dom';
 import env from 'react-dotenv';
-import axios from 'axios'
-
+import axios from 'axios';
 const Rep = ( {rep } ) => {
 
-    const {name,  party, phone, url, officeName, photoUrl, stateId} = rep
+    const {name,  party, phone, url, officeName, photoUrl, stateId, missed_votes} = rep
 
-    console.log("Rep.js: " + rep)
+    console.log("Rep.js: " + JSON.stringify(rep))
     return (
         //Representative Basic info & Link to RepPage.js 
         <div className="Rep mx-auto mt-4">
@@ -28,6 +27,8 @@ const Rep = ( {rep } ) => {
           
             </div>
             {/* <img src ={photoUrl}></img> */}
+
+            
         </div>
 
     )
