@@ -23,7 +23,7 @@ const RepPage = ({match}) => {
     repHolder.facebookUrl = '';
     repHolder.youtubeUrl = '';
 
-    // get rep info based on name
+    // get rep info based on name - setThisRep state
     useEffect(() => {
         
         for (let i = 0; i < reps.length; i++) {
@@ -86,25 +86,3 @@ export default RepPage;
 
 
 
-
-
-// {url && 
-//     <a id="repWebsiteButton" target="_blank" href={url} >
-//         <button className="btn mx-1 btn-dark website-button"><i class="fas fa-globe"> Website</i></button>
-//     </a>
-//     }
-//     { twitterUrl &&
-//         <a id="button "target="_blank" href={twitterUrl} >    
-//             <button className="btn mx-1 twitter-button"> <i class="fab fa-twitter"></i> Twitter</button>
-//         </a> 
-//     }
-//     { facebookUrl &&
-//         <a id="button "target="_blank" href={facebookUrl} >    
-//             <button className="btn mx-1 facebook-button"> <i class="fab fa-facebook"></i> Facebook</button>
-//         </a> 
-//     }
-//     { youtubeUrl &&
-//         <a id="button "target="_blank" href={youtubeUrl} >    
-//             <button className="btn mx-1 youtube-button"> <i class="fab fa-youtube"></i> Youtube</button>
-//         </a> 
-//     }

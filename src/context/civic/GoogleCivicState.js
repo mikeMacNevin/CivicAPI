@@ -11,28 +11,25 @@ import {
 } from '../types'
 
 
-
 const GoogleCivicState = props => {
+
     const initialState = {
         reps: []
     }
-
-    const [state, dispatch] = useReducer(GoogleCivicReducer, initialState);
-
-    const searchAddress = async text => {
     
-    const res = await axios.get(
+    const [state, dispatch] = useReducer(GoogleCivicReducer, initialState);
+   
+    const searchAddress = async text => {
+
+        const res = await axios.get(
         `https://www.googleapis.com/civicinfo/v2/representatives?key=AIzaSyA-alrA4NG9OOesuE1PE-Bb4Cpduujf0Hg&address=${text}`
     )
-        console.log("res.data: " + JSON.stringify(repTest(res.data)))
+        // console.log("res.data: " + JSON.stringify(repTest(res.data)))
     
    dispatch({
         type: SEARCH_ADDRESS,
-        // payload: res.data
         payload:repTest(res.data)
-    })
-   
-    // console.log("GoogleCivicState res.data: " + JSON.stringify(res.data))
+    })   
 }
 
 return (
@@ -49,7 +46,6 @@ return (
 }
 
 export default GoogleCivicState;
-//check resData
 
 
 

@@ -1,30 +1,51 @@
 import proPublica  from "./propublica";
 
-export default function repTest(resData) {
-    var newRepArr = []
-    var repArr = []
-    let obj ={}
-    let i;
-    let officesCount = 0
-    
-    // console.log("GoogleCivicState resData: " + JSON.stringify(resData))
-    console.log('reeeeepppp tteeestttt')
 
-    if (resData.offices && resData.officials) {
+export default function repTest(resData) {
+
+    let returnReps = checkReps(resData)
+
+    console.log("googlreps.js returnReps: " + JSON.stringify(returnReps))
+
+    // let finalReturnReps = proPublica(returnReps).then(result => {
+
+    // })
+    return returnReps
+}
+
+const callbackProPublica = (data) => {
+    console.log("googlereps.js: callbackProPublica() called!")
+    return data
+}
+
+let callProPublica = function(someData) {
+    return someData
+}
+
+const checkReps = (data) => {
+    let repArr = []
+    var obj ={}
+    let i
+    if (data.offices && data.officials) {
         // offices
-        for (i = 0; i < resData.offices.length; i++) {
+        obj.normalizedInput = {}
+        obj.normalizedInput.state = ''
+        obj.normalizedInput.state = data.normalizedInput.state
+
+        console.log("NO: " + JSON.stringify(obj.normalizedInput))
+        for (i = 0; i < data.offices.length; i++) {
             // *add name* 
-            obj.officeName = resData.offices[i].name
+            obj.officeName = data.offices[i].name
             // *add  level* 
-            obj.level = resData.offices[i].levels[0]
+            obj.level = data.offices[i].levels[0]
             // *duplicate office if 'office indices' greater than one - kind of hacky right now*
-            resData.offices[i].officialIndices.forEach(e => {
+            data.offices[i].officialIndices.forEach(e => {
                 obj = {}
-                obj.officeName = resData.offices[i].name
-                obj.level = resData.offices[i].levels[0]
+                obj.officeName = data.offices[i].name
+                obj.level = data.offices[i].levels[0]
 
                 //stateId for Open Secrets API
-                obj.stateId = resData.normalizedInput.state
+                obj.stateId = data.normalizedInput.state
                 repArr.push(obj)
             })
             // clear obj 
@@ -32,67 +53,51 @@ export default function repTest(resData) {
         };
 
         // officials
-        for (let j = 0; j < resData.officials.length; j++) {
+        for (let j = 0; j < data.officials.length; j++) {
             // *add social media channels*
-            if (resData.officials[j].channels) {
+            if (data.officials[j].channels) {
                 repArr[j].channels = []
-                resData.officials[j].channels.forEach( (f, k) => {
+                data.officials[j].channels.forEach( (f, k) => {
                     if (f['id']) {
                         repArr[j].channels.push({"type" :`${f.type}.com/${f.id}` })
                     }
                 })
             }
             // *add name*
-            repArr[j].name = resData.officials[j].name
+            repArr[j].name = data.officials[j].name
             // *add address if exists*
-            if (resData.officials[j].address) {
-                repArr[j].line1 = resData.officials[j].address[0].line1;
-                repArr[j].line1 = resData.officials[j].address[0].city;
-                repArr[j].line1 = resData.officials[j].address[0].state;
-                repArr[j].line1 = resData.officials[j].address[0].zip;
+            if (data.officials[j].address) {
+                repArr[j].line1 = data.officials[j].address[0].line1;
+                repArr[j].line1 = data.officials[j].address[0].city;
+                repArr[j].line1 = data.officials[j].address[0].state;
+                repArr[j].line1 = data.officials[j].address[0].zip;
             }
             // *add political party*
-            repArr[j].party = resData.officials[j].party
+            repArr[j].party = data.officials[j].party
             // *add phone if exists*
-            if (resData.officials[j].phones) {
-                if (resData.officials[j].phones[0].length > 0) {
-                    repArr[j].phone = resData.officials[j].phones[0]
+            if (data.officials[j].phones) {
+                if (data.officials[j].phones[0].length > 0) {
+                    repArr[j].phone = data.officials[j].phones[0]
                 }
             }
             // *add website url*
-            if(resData.officials[j].urls) {
-                repArr[j].url = resData.officials[j].urls[0]
+            if(data.officials[j].urls) {
+                repArr[j].url = data.officials[j].urls[0]
             }
-            if (resData.officials[j].photoUrl) {
-                repArr[j].photoUrl = resData.officials[j].photoUrl
+            if (data.officials[j].photoUrl) {
+                repArr[j].photoUrl = data.officials[j].photoUrl
             }
-
-            if(j == resData.officials.length - 1 ) {
+            if(j == (data.officials.length - 1) ) {
                 console.log("******************************")
-                    proPublica(resData).then(function(e) {
-                    repArr.push(e)
-                    console.log("googlereps.js propublica then e:" + JSON.stringify(e))
-                    console.log("googlereps.js propublica then repArr:" + JSON.stringify(repArr))
-                }).catch(error => {
-                    console.log("pro error: " + error)
-                })
+                console.log("YESSSS: " + JSON.stringify(repArr))
+
             }
                
         } //end for
         return repArr
+
+
+
     } //end if
 
-
-
-
-
-        // console.log("mikes newRepArr: " + newRepArr)
-        // console.log("mikes repArr array? " + Array.isArray(newRepArr))
-        // // return newRepArr;
-        // console.log("proPublica: " + proPublica(resData))
-
-        // console.log("final repArr: " + JSON.stringify(repArr))
-        // return repArr
-
 }
-

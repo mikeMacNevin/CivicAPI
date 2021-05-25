@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export default async function proPublica(resData) {
+export default async function proPublica(googleCivicData) {
     let finalResult;
     // PRO PUBLICA
     let returnValue = []
@@ -10,22 +10,28 @@ export default async function proPublica(resData) {
     let resProPublica = await axios.get(newurl,
         { 
         headers: { 
+            // need to change eventually because I'm dumb and left public and is out there on internet somewhere....
             'X-API-Key': 'xehBDsPnNx2F4CKjwq9spiSC6QZDZ5AWH7m9UQpM'
         }
     }).then(resp => {
         // console.log("Da pro: " + JSON.stringify(resp))
-        returnValue = filterPro(resp, resData)
+        returnValue = filterPro(resp, googleCivicData)
         // console.log("and thennnn: " + JSON.stringify(filterPro(resp, resData))) 
     })
-    console.log("returnValue: " + JSON.stringify(returnValue))
+    // console.log("returnValue: " + JSON.stringify(returnValue))
     return returnValue
 
 } 
     
 var filterPro = function(data, googleData) {
+    console.log("***data*** " + JSON.stringify(data))
+    console.log("***googleData*** " + JSON.stringify(googleData))
+
     var members = data.data.results[0].members;
     var googleReps = googleData.officials
-    var googleState = googleData.normalizedInput.state
+    var googleState = "VA"
+    
+    // googleData.normalizedInput.state
 
     // state matching condition for filter
     function filter_by_state(member) {
@@ -48,10 +54,11 @@ var filterPro = function(data, googleData) {
     
                 if (  (senator == "senator") && (name.includes(firstName)) && (name.includes(lastName)) ) {
                     googleReps[j].missed_votes = filteredState[i].missed_votes
-                   console.log("senator")
+                   console.log("propublica.js: senator")
                 }
 
             })
+            console.log("proPublica: googleReps: " + JSON.stringify(googleReps))
         })
         return googleReps
     }  

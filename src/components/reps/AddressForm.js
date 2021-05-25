@@ -1,6 +1,5 @@
 import React, { useState, useContext } from 'react'
 import GoogleCivicContext from '../../context/civic/googleCivicContext'
-import GoogleCivicState from '../../context/civic/GoogleCivicState'
 import './Rep.scss';
 
 const AddressForm = () => {
