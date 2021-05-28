@@ -1,27 +1,35 @@
 import proPublica  from "./propublica";
 
 
+
 export default function repTest(resData) {
 
     let returnReps = checkReps(resData)
 
-    console.log("googlreps.js returnReps: " + JSON.stringify(returnReps))
+    console.log("googlereps.js resData: " + typeof returnReps)
+    console.log("RETTURNN REPPSS: " + typeof returnReps)
+    console.log("RETTURNN REPPSSS: " + JSON.stringify(returnReps))
 
-    // let finalReturnReps = proPublica(returnReps).then(result => {
+    // return setTimeout(() => {
+    //     console.log("calling propub: " + proPublica(returnReps).then(res => {
+    //         console.log("propublica promise result: " + JSON.stringify(res))
+    //         return res
+    //     }))
 
-    // })
-    return returnReps
+    // }, 1000)
+
+
+    proPublica(returnReps).then(res => {
+        return res
+
+    })
+
+
+
 }
 
-const callbackProPublica = (data) => {
-    console.log("googlereps.js: callbackProPublica() called!")
-    return data
-}
 
-let callProPublica = function(someData) {
-    return someData
-}
-
+///////////////filter through the data before passing to proPublica()
 const checkReps = (data) => {
     let repArr = []
     var obj ={}
@@ -29,9 +37,6 @@ const checkReps = (data) => {
     if (data.offices && data.officials) {
         // offices
         obj.normalizedInput = {}
-        obj.normalizedInput.state = ''
-        obj.normalizedInput.state = data.normalizedInput.state
-
         console.log("NO: " + JSON.stringify(obj.normalizedInput))
         for (i = 0; i < data.offices.length; i++) {
             // *add name* 
@@ -43,7 +48,6 @@ const checkReps = (data) => {
                 obj = {}
                 obj.officeName = data.offices[i].name
                 obj.level = data.offices[i].levels[0]
-
                 //stateId for Open Secrets API
                 obj.stateId = data.normalizedInput.state
                 repArr.push(obj)
@@ -51,7 +55,6 @@ const checkReps = (data) => {
             // clear obj 
             obj = {}
         };
-
         // officials
         for (let j = 0; j < data.officials.length; j++) {
             // *add social media channels*
@@ -90,14 +93,10 @@ const checkReps = (data) => {
             if(j == (data.officials.length - 1) ) {
                 console.log("******************************")
                 console.log("YESSSS: " + JSON.stringify(repArr))
-
             }
-               
         } //end for
+        console.log("REPARR: " + JSON.stringify(repArr))
         return repArr
-
-
-
     } //end if
 
 }
