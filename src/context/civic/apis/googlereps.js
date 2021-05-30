@@ -1,7 +1,5 @@
 import proPublica  from "./propublica";
 
-
-
 export default function repTest(resData) {
 
     let returnReps = checkReps(resData)
@@ -10,23 +8,18 @@ export default function repTest(resData) {
     console.log("RETTURNN REPPSS: " + typeof returnReps)
     console.log("RETTURNN REPPSSS: " + JSON.stringify(returnReps))
 
-    // return setTimeout(() => {
-    //     console.log("calling propub: " + proPublica(returnReps).then(res => {
-    //         console.log("propublica promise result: " + JSON.stringify(res))
-    //         return res
-    //     }))
+    // const callProPub = async data => {
+    //     let proResults = await 
+    //     return proResults
+    // }
 
-    // }, 1000)
-
-
-    proPublica(returnReps).then(res => {
-        return res
-
-    })
-
-
-
+    
+    // return proPublica(returnReps).resolve()
+    
 }
+
+
+
 
 
 ///////////////filter through the data before passing to proPublica()

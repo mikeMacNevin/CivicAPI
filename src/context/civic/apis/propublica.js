@@ -14,11 +14,11 @@ export default async function proPublica(googleCivicData) {
             'X-API-Key': 'xehBDsPnNx2F4CKjwq9spiSC6QZDZ5AWH7m9UQpM'
         }
     }).then(resp => {
-        // console.log("Da pro: " + JSON.stringify(resp))
+        console.log("Da pro: " + JSON.stringify(resp))
         returnValue = filterPro(resp, googleCivicData)
+
         // console.log("and thennnn: " + JSON.stringify(filterPro(resp, resData))) 
     })
-    // console.log("returnValue: " + JSON.stringify(returnValue))
     return returnValue
 
 } 
