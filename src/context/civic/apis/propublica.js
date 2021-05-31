@@ -19,6 +19,9 @@ export default async function proPublica(googleCivicData) {
 
         // console.log("and thennnn: " + JSON.stringify(filterPro(resp, resData))) 
     })
+
+
+    console.log("proPublica right before return: " + JSON.stringify(returnValue))
     return returnValue
 
 } 

@@ -12,7 +12,7 @@ export default function repTest(resData) {
     //     let proResults = await 
     //     return proResults
     // }
-
+    return returnReps
     
     // return proPublica(returnReps).resolve()
     
