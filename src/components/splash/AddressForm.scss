@@ -1,0 +1,111 @@
+$lightpurp: rgb(152,158,199);
+$blue: rgb(95,138,232);
+$green: rgb(63,73,65);
+$darkpurp: rgb(95,103,145);
+$black: rgb(7,11,23);
+$red: #5E0B15;    
+
+
+.address-form {
+    margin-top:18rem;
+    margin-bottom:5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+        .form-inline {
+            padding-top:1rem;
+        }
+    // .address-inner-container {
+    //     padding: 2rem;
+    //     border-radius: 5px;
+    //     background-color: rgba(255,255,255,0.8);
+        .no-address-form {
+            padding-top:6rem;
+            padding-bottom: 6px;
+        }
+        
+        h1, h2 {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace !important;
+            margin-bottom:0;
+            line-height:0.8;
+            font-size: 3rem;
+        }
+        h1 {
+            color: white;
+            font-size: 4rem;
+        }
+        .home-address {
+            align-self: left;
+            text-align: left;
+            width: 100%;
+        }
+        h2 {
+            align-self: left;
+            color: $black !important;
+            margin-top:1rem;
+            font-size: 2rem;
+            color:$blue;
+            padding-left:4px;
+
+        }
+        #addressInput {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        input {
+            text-align: center;
+        }
+        .form-group-two {
+            margin-top:-1px;
+
+        }
+        .form-control {
+            background-color: rgba(255,255,255,0.6);
+            color:$blue;
+            border-color: rgba(255,255,255, 0.8);
+            
+            
+        }
+        .form-control::placeholder {
+            color:$black;
+            font-size:1.2rem;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .form-inline {
+            margin-top:2rem;
+            align-items:flex-start;
+        }
+
+        .search-div {
+            text-align: center;
+        }
+        button {
+            bottom: 2px;
+            border-color: white;
+            width:100%;
+            border-color: rgba(255,255,255, 0.6);
+            background-color: $blue;
+            transition: 0.5s;
+            
+            input {
+                background-color: transparent;
+                background-color: $blue;
+
+                border: none;
+                color: white ;
+                transition: 0.5s;
+
+            }
+        }
+        .btn-primary {
+            background-color: $blue;
+        }
+        button:active, button:hover {
+            border-color: $red;
+            input {
+                color:$red;
+
+            }
+        }
+    }

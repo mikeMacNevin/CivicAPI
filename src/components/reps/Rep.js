@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Rep = ( {rep } ) => {
 
-    const {name,  party, officeName, id} = rep
+    const {name,  party, officeName, id, missed_votes } = rep
 
     // console.log("Rep.js: " + JSON.stringify(rep))
     return (

@@ -2,13 +2,15 @@
 
     h1 {
         font-size: 3rem;
+        padding-top: 3rem;
+        font-family: 'Courier New', Courier, monospace;
 
     }
     h2 {
         font-size: 2rem;
     }
 
-    min-height: 30vh;
+    min-height: 100vh;
     min-width: 100%;
     background:  url('/assets/congress.jpg') hsla(280, 77%, 41%, 0.8);
     background-position: center;
@@ -16,7 +18,7 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: top;
     
 
     .SplashImage {

@@ -7,7 +7,6 @@ import SocialChannels from './SocialChannels'
 import Twitter from './Twitter'
 import RepImage from './RepImage'
 
-
 const RepPage = ({match}) => {
     const googleCivicContext = useContext(GoogleCivicContext)
     const { reps, searchAddress } = googleCivicContext;
