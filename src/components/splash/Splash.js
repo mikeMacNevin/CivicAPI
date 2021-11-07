@@ -3,6 +3,7 @@ import React, { Fragment, useEffect, useContext } from 'react'
 import congress from '../../assets/congress.jpg'
 import AddressForm from './AddressForm';
 import GoogleCivicContext from '../../context/civic/googleCivicContext';
+import UnderSplash from './under/UnderSplash';
 
 const Splash = () => {
 
@@ -11,15 +12,19 @@ const Splash = () => {
     const { reps, searchAddress } = googleCivicContext;
     if (reps.length < 2 ) {
         return (
-            <div className="Splash">
-                <div className="SplashImage text-center text-white">
-                    <h1>who governs you?</h1>
-                    
-                    
-                    <AddressForm />
 
+            <Fragment>
+                <div className="Splash">
+                    <div className="SplashImage text-center text-white">
+                        <h1>who governs you?</h1>
+                        
+                        
+                        <AddressForm />
+
+                    </div>
                 </div>
-            </div>
+                <UnderSplash />
+            </Fragment>
         )
     }
     else {
