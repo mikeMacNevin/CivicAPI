@@ -4,9 +4,22 @@ $green: rgb(63,73,65);
 $darkpurp: rgb(95,103,145);
 $black: rgb(7,11,23);
 $red: #5E0B15;    
+$courier: 'Courier New', Courier, monospace !important;
+$sans: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 
 
 .BlockOne {
     background-color: $black;
-    min-height: 50vmin;
+    min-height: 160vmin;
+    font-family: $sans;
+    .row {
+
+        .col {
+            padding-top:6rem;
+            color:white;
+        }
+        .colOne {
+            padding-top:0;
+        }
+    }
 }

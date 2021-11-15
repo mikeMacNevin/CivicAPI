@@ -1,7 +1,7 @@
 .SplashImage{
 
     h1 {
-        font-size: 3rem;
+        font-size: 4rem;
         padding-top: 3rem;
         font-family: 'Courier New', Courier, monospace;
 
@@ -18,12 +18,18 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: top;
+    justify-content: center;
     
 
     .SplashImage {
         min-height: 75vh;
         min-width: 100%;
+    }
+
+    .splash-button-wrapper {
+        margin: 0 auto;
+
+        max-width: 40%;
     }
 
     

@@ -9,7 +9,7 @@ const Rep = ( {rep } ) => {
     return (
         //Representative Basic info & Link to RepPage.js 
         <div className="Rep mx-auto mt-4">
-            <p className="mb-0 under">{officeName}</p>
+            <p className="mb-0 under"><strong>{officeName}</strong></p>
             <div className="d-flex justify-content-between align-items-center">
                 <div>
                 <p className="mb-0">{name}</p>

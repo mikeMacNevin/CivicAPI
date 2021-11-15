@@ -16,6 +16,7 @@ function App() {
         <div className="App">
           <header className="App-header">
             <Splash />
+            
             <Route path="/" exact component={Reps}/>
             <Route path="/rep/:repname" component={RepPage}/>
           </header>

@@ -4,15 +4,19 @@ $green: rgb(63,73,65);
 $darkpurp: rgb(95,103,145);
 $black: rgb(7,11,23);
 $red: #5E0B15;    
+$courier: 'Courier New', Courier, monospace !important;
+$sans: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 
 
 .address-form {
-    margin-top:18rem;
+
+    ::placeholder {
+        color: white;
+    }
+    // margin-top:18rem;
     margin-bottom:5rem;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
+
         .form-inline {
             padding-top:1rem;
         }
@@ -27,7 +31,7 @@ $red: #5E0B15;
         
         h1, h2 {
             text-align: center;
-            font-family: 'Courier New', Courier, monospace !important;
+            font-family: $courier;
             margin-bottom:0;
             line-height:0.8;
             font-size: 3rem;
@@ -37,8 +41,8 @@ $red: #5E0B15;
             font-size: 4rem;
         }
         .home-address {
-            align-self: left;
-            text-align: left;
+            // align-self: left;
+            // text-align: left;
             width: 100%;
         }
         h2 {
@@ -54,26 +58,25 @@ $red: #5E0B15;
             font-family: 'Courier New', Courier, monospace;
         }
         input {
-            text-align: center;
+            // text-align: center;
         }
         .form-group-two {
             margin-top:-1px;
 
         }
         .form-control {
-            background-color: rgba(255,255,255,0.6);
-            color:$blue;
+            background-color: rgba(255,255,255,0.0);
+            color: white !important;
             border-color: rgba(255,255,255, 0.8);
             
             
         }
         .form-control::placeholder {
-            color:$black;
+            color: white !important;
             font-size:1.2rem;
             font-family: 'Courier New', Courier, monospace;
         }
         .form-inline {
-            margin-top:2rem;
             align-items:flex-start;
         }
 
@@ -87,11 +90,11 @@ $red: #5E0B15;
             border-color: rgba(255,255,255, 0.6);
             background-color: $blue;
             transition: 0.5s;
-            
+            font-family:$sans;
             input {
                 background-color: transparent;
                 background-color: $blue;
-
+            
                 border: none;
                 color: white ;
                 transition: 0.5s;
