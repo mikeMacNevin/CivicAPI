@@ -11,10 +11,11 @@ $sans: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial
 .address-form {
 
     ::placeholder {
+
         color: white;
     }
     // margin-top:18rem;
-    margin-bottom:5rem;
+    margin-bottom:2rem;
 
 
         .form-inline {
@@ -55,7 +56,7 @@ $sans: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial
 
         }
         #addressInput {
-            font-family: 'Courier New', Courier, monospace;
+            font-family: $sans;
         }
         input {
             // text-align: center;
@@ -72,9 +73,10 @@ $sans: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial
             
         }
         .form-control::placeholder {
-            color: white !important;
+            color: rgba(256, 256, 256, 0.4);
             font-size:1.2rem;
-            font-family: 'Courier New', Courier, monospace;
+            font-weight:100;
+            font-family: $sans;
         }
         .form-inline {
             align-items:flex-start;

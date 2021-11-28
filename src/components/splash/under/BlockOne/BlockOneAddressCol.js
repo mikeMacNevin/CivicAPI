@@ -1,13 +1,21 @@
-import React, {Fragment} from 'react'
-import BlockOne from '../BlockOne'
+import { Fragment } from 'react'
+
+import BlockOne from './BlockOne'
 
 import AddressForm from '../../AddressForm'
-const BlockOneAddressCol= () => {
+const BlockOneAddressCol = () => {
     return (
-        <Fragment>
-            <h2>Find your representatives</h2>
+        <div class="for-centering">
+       <h2>Find your representatives</h2>
             <AddressForm />
-        </Fragment>
+{/*
+        <h5>Powered By:</h5>
+        <ul>
+            <li>{/*<i class="fab fa-google"></i>}Google Civic Information API</li>
+            <li>ProPublica</li>
+        </ul>
+*/}         
+        </div>
     )
 }
 

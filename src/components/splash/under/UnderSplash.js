@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react'
-import BlockOne from './BlockOne'
+import BlockOne from './BlockOne/BlockOne.js'
+import BlockTwo from './BlockTwo/BlockTwo.js'
 
 const UnderSplash = () => {
 
@@ -8,6 +9,7 @@ const UnderSplash = () => {
             <div> 
                 <BlockOne />
                 {/* <BlockTwo /> */}
+                <BlockTwo />
             </div>
         </Fragment>
     )

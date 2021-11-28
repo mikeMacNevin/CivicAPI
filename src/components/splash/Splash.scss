@@ -1,3 +1,20 @@
+// $lightpurp: rgb(152,158,199);
+// $blue: rgb(95,138,232);
+// $green: rgb(63,73,65);
+// $darkpurp: rgb(95,103,145);
+// $black: rgb(7,11,23);
+// $red: #5E0B15;    
+// $courier: 'Courier New', Courier, monospace !important;
+// $sans: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
+ 
+@import '../../assets/global.scss';
+
+.Splash {
+    background-color: $black;
+
+}
+
 .SplashImage{
 
     h1 {
@@ -28,7 +45,6 @@
 
     .splash-button-wrapper {
         margin: 0 auto;
-
         max-width: 40%;
     }
 

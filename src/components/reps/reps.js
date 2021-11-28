@@ -7,6 +7,8 @@ import Rep from './Rep'
 import AddressForm from '../splash/AddressForm';
 import RepNav from './RepNav';
 
+import './Reps.scss'
+
 const Reps = (props) => {
 
     const googleCivicContext = useContext(GoogleCivicContext)
@@ -21,8 +23,16 @@ const Reps = (props) => {
         )
       } else {
         return (   
-          <div className = "row">   
-            <div className="rep-container col-12 col-sm-6 col-lg-4 mx-auto mt-3">  
+          <div className = "row Reps container-fluid">   
+            <div className="reps-intro col-12 col-sm-7 d-flex flex-column align-items-center justify-content-center">
+                <h1>Your Representatives</h1>
+                <div className="text-left">
+                  <p>View your national, state, and local government representatives.</p>
+                  <p>Follow them through various media feeds.</p>
+                  <p>Feel free to give them a call if you have something to tell them.</p>
+                </div>
+            </div>
+            <div className="rep-container col-12 col-sm-5 ">  
               {/*REP NAVIGATION TABS*/}       
               <RepNav />
               {/*SHOW REPS*/}       

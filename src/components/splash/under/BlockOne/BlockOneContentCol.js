@@ -1,6 +1,6 @@
 
 import React, {Fragment} from 'react'
-import photo from '../../../../assets/projects-whoreps.jpg'
+import photo from '../../../../assets/phone.png'
 const BlockOneContentCol = () => {
     return (
         <div className="content-col">

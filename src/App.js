@@ -14,12 +14,12 @@ function App() {
     <GoogleCivicState>
       <Router>
         <div className="App">
-          <header className="App-header">
+          {/* <header className="App-header"> */}
             <Splash />
             
-            <Route path="/" exact component={Reps}/>
+            <Route path="" exact component={Reps}/>
             <Route path="/rep/:repname" component={RepPage}/>
-          </header>
+          {/* </header> */}
         </div>
       </Router>
     </GoogleCivicState>

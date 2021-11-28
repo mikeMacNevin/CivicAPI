@@ -1,0 +1,26 @@
+
+@import '../../../../assets/global.scss';
+
+.BlockTwo {
+    padding-top:10vh;
+    min-height: 60vh;
+    color: white;
+    background: url(../../../../assets/voting_booths.jpeg) rgba(7,11,23, 0.7);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+
+
+    .BlockTwoText {
+        text-align: center;
+
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        //hacky shit
+        min-height: 40vh;
+    
+    }
+
+}

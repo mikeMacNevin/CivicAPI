@@ -1,15 +1,15 @@
 import './AddressForm.scss';
-
 import React, { useState, useContext } from 'react'
 import GoogleCivicContext from '../../context/civic/googleCivicContext'
-
+import { useHistory } from "react-router-dom";
 
 const AddressForm = () => {
-
     const googleCivicContext = useContext(GoogleCivicContext)
     
+    const history = useHistory();
+
+
     const [text, setText] = useState('')
-    
     //
     const onSubmit = e => {
         e.preventDefault()
@@ -17,15 +17,17 @@ const AddressForm = () => {
             console.log('no text entered')
         } else {
             googleCivicContext.searchAddress(text)
+
             setText('')
             console.log("AddressForm: Address Input Submitted")
+            history.push("/representatives/");
+
 
         }
     }
 
     // change the state of 'text' from text input bar
     const onChange = e => setText(e.target.value)
-
  
     return (
         <div className="address-form" id="address-form">

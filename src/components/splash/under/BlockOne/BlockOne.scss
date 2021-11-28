@@ -10,16 +10,37 @@ $sans: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial
 
 .BlockOne {
     background-color: $black;
-    min-height: 160vmin;
-    font-family: $sans;
+    font-family: $courier;
+
     .row {
 
         .col {
-            padding-top:6rem;
             color:white;
         }
         .colOne {
             padding-top:0;
+            padding-right:0;
         }
+    }
+
+    h5 {
+        // font-family: $courier;
+        margin-bottom: 0;
+    }
+    ul {
+        padding-left:0;
+        list-style: none;
+        li {
+            font-family: $sans;
+        }
+    }
+
+
+    .colTwo {
+        padding-left:0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }

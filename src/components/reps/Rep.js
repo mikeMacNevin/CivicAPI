@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
+import './Rep.scss';
 const Rep = ( {rep } ) => {
 
     const {name,  party, officeName, id, missed_votes } = rep

@@ -1,7 +1,7 @@
 import React, {Fragment } from 'react'
 
-import BlockOneAddressCol from './BlockOne/BlockOneAddressCol';
-import BlockOneContentCol from './BlockOne/BlockOneContentCol';
+import BlockOneAddressCol from './BlockOneAddressCol';
+import BlockOneContentCol from './BlockOneContentCol';
 
 import './BlockOne.scss';
 
@@ -15,7 +15,9 @@ return (
                     <BlockOneContentCol />
                     </div>
                 <div className="col colTwo col-12 col-sm-6">
-                    <BlockOneAddressCol />
+                    <div>
+                        <BlockOneAddressCol />
+                    </div>
                 </div>
             </div>
         </div>
