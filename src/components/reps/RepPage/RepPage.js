@@ -1,16 +1,22 @@
 import React, {useContext, useDebugValue, useEffect, useState} from 'react'
 import PropTypes from 'prop-types'
 import GoogleCivicContext from '../../../context/civic/googleCivicContext'
-
-import {BrowserRouter as Router, Link} from 'react-router-dom'
 import SocialChannels from './SocialChannels'
 import Twitter from './Twitter'
 import RepImage from './RepImage'
 
+import {match, useParams, useLocation} from 'react-router';
+
+
 const RepPage = ({match}) => {
     const googleCivicContext = useContext(GoogleCivicContext)
     const { reps, searchAddress } = googleCivicContext;
-    
+
+    //nav context 
+    // const navContext = useContext(navContext)
+    // const { page, changeNav} = navContext;
+
+    //state
     const [thisRep, setThisRep] = useState({})
     // get specific representative name
     let repname = match.params.repname
@@ -24,7 +30,6 @@ const RepPage = ({match}) => {
 
     // get rep info based on name - setThisRep state
     useEffect(() => {
-        
         for (let i = 0; i < reps.length; i++) {
             if (reps[i].name == repname) {
                 repHolder = reps[i]
@@ -51,7 +56,7 @@ const RepPage = ({match}) => {
                 repname = '';
             }
         }
-     }, [])
+     }, [repname])
 
      const {
         officeName,
@@ -69,14 +74,14 @@ const RepPage = ({match}) => {
      console.log("RepPage: thisRep: " + JSON.stringify(thisRep))
 
     return (
-        <div className="container text-center mt-3">
+        <div className="col-sm-7 text-center mt-3">
             <h2>{repname}</h2>
             <h5><i>{officeName}</i></h5>
             <RepImage photoUrl={photoUrl}></RepImage>
             <p className="pb-1">{party}</p>
             <p>Office: {phone}</p>
             <SocialChannels repSocial={thisRep}></SocialChannels>
-            <Twitter twitter={twitterUrl}></Twitter>
+            <Twitter key={twitterUrl} twitter={twitterUrl}></Twitter>
         </div>
     );
 }

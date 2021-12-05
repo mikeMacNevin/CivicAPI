@@ -11,13 +11,13 @@ return (
     <Fragment>
         <div className="BlockOne" id="BlockOne">
             <div className="row">
-                <div className="col colOne col-12 col-sm-6">
+                <div className="col colOne col-12 col-sm-5">
                     <BlockOneContentCol />
-                    </div>
-                <div className="col colTwo col-12 col-sm-6">
-                    <div>
+                </div>
+                <div className="col colTwo col-12 col-sm-7">
+
                         <BlockOneAddressCol />
-                    </div>
+
                 </div>
             </div>
         </div>

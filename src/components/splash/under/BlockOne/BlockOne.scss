@@ -1,11 +1,4 @@
-$lightpurp: rgb(152,158,199);
-$blue: rgb(95,138,232);
-$green: rgb(63,73,65);
-$darkpurp: rgb(95,103,145);
-$black: rgb(7,11,23);
-$red: #5E0B15;    
-$courier: 'Courier New', Courier, monospace !important;
-$sans: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+@import '../../../../assets/global.scss';
 
 
 .BlockOne {
@@ -37,10 +30,36 @@ $sans: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial
 
 
     .colTwo {
-        padding-left:0;
+        padding-left:15px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        .for-centering {
+            width:100%;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 576px) {
+    .colOne {
+
+        .content-col {
+            display: none;
+        }
+    }
+    .colTwo {
+        padding-top:3rem;
+
+        h2 {
+            padding-left: 30px;
+        }
+        div {
+            padding-left:15px;
+        }
+
     }
 }

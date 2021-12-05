@@ -10,16 +10,21 @@
 
     .reps-intro {
         padding: 0 8%;
+        text-align: left;
+        p {
+            font-size: 0.8rem;
+            margin-bottom:0.5rem;
+
+
+        }
     }
 
-    .rep-container {
-        
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
 
+}
+
+    .reps-container {
+        padding-top:10%;
         .nav-item {
             font-size: 14px;
         }
     }
-}

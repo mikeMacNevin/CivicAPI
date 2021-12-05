@@ -13,13 +13,8 @@ import {
 
 
 const GoogleCivicState = props => {
-
-    const initialState = {
-        reps: []
-    }
-    
+    const initialState = { reps: [] }
     const [state, dispatch] = useReducer(GoogleCivicReducer, initialState);
-   
     const searchAddress = async text => {
     
         const res = await axios.get(
@@ -33,25 +28,14 @@ const GoogleCivicState = props => {
                 payload: resp
             })  
         })
-        console.log("APPPPLLLLEE : " + JSON.stringify(apple))
-        console.log("ORANGEEEE : " + JSON.stringify(orange))
-
-
-
-
-            // console.log("res.data: " + JSON.stringify(repTest(res.data)))
-        
-  
     }
 
 return (
-    
     <GoogleCivicContext.Provider
         value= {{
             searchAddress,
             reps: state.reps
-        }}
-    >
+        }}>
     {props.children}
     </GoogleCivicContext.Provider>
     )

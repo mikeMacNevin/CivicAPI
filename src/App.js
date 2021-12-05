@@ -3,7 +3,7 @@ import Reps from './components/reps/reps'
 import RepPage from './components/reps/RepPage/RepPage'
 import GoogleCivicState from './context/civic/GoogleCivicState'
 
-
+import Documents from './components/documents/Documents';
 import {BrowserRouter as Router} from 'react-router-dom';
 import Route from 'react-router-dom/Route';
 
@@ -12,13 +12,16 @@ import './index.scss';
 function App() {
   return (
     <GoogleCivicState>
+      
       <Router>
         <div className="App">
           {/* <header className="App-header"> */}
             <Splash />
-            
-            <Route path="" exact component={Reps}/>
-            <Route path="/rep/:repname" component={RepPage}/>
+            <div className="row container-fluid">
+              <Route path="" exact component={Reps}/>
+              <Route path="/rep/:repname" component={RepPage}/>
+            </div>
+            <Route path="/documents" component={Documents}/>
           {/* </header> */}
         </div>
       </Router>

@@ -1,26 +1,18 @@
 import proPublica  from "./propublica";
 
 export default function repTest(resData) {
-
     let returnReps = checkReps(resData)
 
     console.log("googlereps.js resData: " + typeof returnReps)
     console.log("RETTURNN REPPSS: " + typeof returnReps)
     console.log("RETTURNN REPPSSS: " + JSON.stringify(returnReps))
-
     // const callProPub = async data => {
     //     let proResults = await 
     //     return proResults
     // }
     return returnReps
-    
-    // return proPublica(returnReps).resolve()
-    
+    // return proPublica(returnReps).resolve()    
 }
-
-
-
-
 
 ///////////////filter through the data before passing to proPublica()
 const checkReps = (data) => {
@@ -80,6 +72,7 @@ const checkReps = (data) => {
             if(data.officials[j].urls) {
                 repArr[j].url = data.officials[j].urls[0]
             }
+            // *add photo url*
             if (data.officials[j].photoUrl) {
                 repArr[j].photoUrl = data.officials[j].photoUrl
             }
