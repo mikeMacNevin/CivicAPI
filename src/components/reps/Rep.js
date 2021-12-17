@@ -31,7 +31,7 @@ const Rep = ( {rep, match } ) => {
                 <p className="mb-0">{name}</p>
                 <p className="mb-0 second">{party}</p>
                 </div> 
-                <Link onClick={getPage} to={`/rep/${name}`}>
+                <Link onClick={getPage} to={`${name}`}>
                     <button type="button" className="btn btn-outline-primary btn">View</button>
                 </Link>
             </div>

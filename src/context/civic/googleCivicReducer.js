@@ -10,6 +10,13 @@ export default (state, action) => {
                 ...state,
                 reps: action.payload
             }
+
+        // case EMPTY_REPS:
+        //     console.log("googleCivicReducer: EMPTY_REPS" )
+        //     return {
+        //         ...state,
+        //         reps: action.payload
+        //     }
         default:
             return state
     }

@@ -1,10 +1,10 @@
 
-
+import './Documents.scss'
 
 const Documents = () => {
     return (
-        <div>
-            Documents
+        <div className="documents">
+            <h2>Documents</h2>
         </div>
     )
 }

@@ -12,6 +12,7 @@ const RepPage = ({match}) => {
     const googleCivicContext = useContext(GoogleCivicContext)
     const { reps, searchAddress } = googleCivicContext;
 
+    const params = useParams();
     //nav context 
     // const navContext = useContext(navContext)
     // const { page, changeNav} = navContext;
@@ -19,7 +20,7 @@ const RepPage = ({match}) => {
     //state
     const [thisRep, setThisRep] = useState({})
     // get specific representative name
-    let repname = match.params.repname
+    let repname = params.repname
 
     // 
     let repHolder = {};
@@ -43,11 +44,11 @@ const RepPage = ({match}) => {
                         }
                         // YOUTUBE
                         if (element.type.toLowerCase().indexOf('youtube.com') > -1) {
-                            repHolder.facebookUrl = "https://" + element.type
+                            repHolder.youtubeUrl = "https://" + element.type
                         }
                         // FACEBOOK
                         if (element.type.toLowerCase().indexOf('facebook.com') > -1) {
-                            repHolder.youtubeUrl = "https://" + element.type
+                            repHolder.facebookUrl = "https://" + element.type
                         }
                     })
                     console.log("reeepppp hollldderrr" + JSON.stringify(repHolder))
@@ -74,7 +75,7 @@ const RepPage = ({match}) => {
      console.log("RepPage: thisRep: " + JSON.stringify(thisRep))
 
     return (
-        <div className="col-sm-7 text-center mt-3">
+        <div className=" text-center mt-3">
             <h2>{repname}</h2>
             <h5><i>{officeName}</i></h5>
             <RepImage photoUrl={photoUrl}></RepImage>

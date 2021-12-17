@@ -8,7 +8,7 @@ import repTest from './apis/googlereps'
 
 
 import {
-    SEARCH_ADDRESS
+    SEARCH_ADDRESS,
 } from '../types'
 
 
@@ -30,6 +30,7 @@ const GoogleCivicState = props => {
         })
     }
 
+    
 return (
     <GoogleCivicContext.Provider
         value= {{

@@ -4,9 +4,7 @@
 .BlockOne {
     background-color: $black;
     font-family: $courier;
-
     .row {
-
         .col {
             color:white;
         }
@@ -55,11 +53,29 @@
         padding-top:3rem;
 
         h2 {
-            padding-left: 30px;
+            padding-left: 0px;
         }
         div {
+            padding-left: 0px;
+        }
+
+        .for-centering {
             padding-left:15px;
+            padding-right:2px;
         }
 
     }
+}
+
+@media screen and (max-width: 360px) {
+    .colTwo {
+        .for-centering{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .btn-primary {
+
+        }
+    }
+
 }

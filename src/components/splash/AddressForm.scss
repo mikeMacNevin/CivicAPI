@@ -117,3 +117,28 @@ $sans: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial
             }
         }
     }
+
+    @media screen and (max-width: 576px) {
+        .address-form {
+            width:100%;
+
+            .btn-primary {
+                padding-left:6px;
+                padding-right:6px;
+
+            }
+        }
+    }
+
+
+
+    @media screen and (max-width: 360px) {
+        .address-form {
+            .form-group-one {
+            button.btn {
+                padding-left:6px;
+                padding-right:6px;
+            }
+            }
+        }
+    }

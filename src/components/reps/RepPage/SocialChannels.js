@@ -16,7 +16,7 @@ import GoogleCivicContext from '../../../context/civic/googleCivicContext'
 
     
 
-    console.log(repSocial)
+    console.log("rep social: " + JSON.stringify(repSocial))
     //  console.log(repSocial.facebookUrl)
         return (
             <Fragment>

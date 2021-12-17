@@ -1,10 +1,12 @@
 import './AddressForm.scss';
 import React, { useState, useContext } from 'react'
 import GoogleCivicContext from '../../context/civic/googleCivicContext'
+import { useNavigate} from 'react-router';
 
 const AddressForm = () => {
     const googleCivicContext = useContext(GoogleCivicContext)
     
+    let navigate = useNavigate();
 
 
     const [text, setText] = useState('')
@@ -15,6 +17,7 @@ const AddressForm = () => {
             console.log('no text entered')
         } else {
             googleCivicContext.searchAddress(text)
+            navigate("/reps/");
 
             setText('')
             console.log("AddressForm: Address Input Submitted")

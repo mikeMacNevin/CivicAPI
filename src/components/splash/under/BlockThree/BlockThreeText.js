@@ -1,13 +1,17 @@
 import BlockThree from "./BlockThree"
 
 import { Link } from "react-router-dom"
-import { Route } from "react-router"
+import { Route, useNavigate } from "react-router"
 import Documents from "../../../documents/Documents"
 const BlockThreeText = () => {
+const navigate = useNavigate();
+    const toDocuments = () => {
+        navigate('/documents/')
+    }
     return (
         <div className="BlockThreeText">
             <h2>Grow your knowledge</h2>
-            <p>(Coming Soon)</p>
+            <input type="button" onClick={toDocuments} value="Documents" />
             <ul>
                 {/* <li><Link to="/documents">Constitution</Link></li>
                 <li></li>

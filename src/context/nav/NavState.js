@@ -1,6 +1,6 @@
 import React, {useReducer } from 'react'
 import { CURRENT_PARAMS } from '../types'
-import navContext from './NavContext' 
+import navContext from './navContext' 
 
 import {
     CURRENT_PARAMS

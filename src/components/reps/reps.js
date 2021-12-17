@@ -1,7 +1,10 @@
 import React, { Fragment, useEffect, useContext } from 'react';
+import { Outlet } from 'react-router-dom';
+import { useParams } from 'react-router';
 
 import GoogleCivicContext from '../../context/civic/googleCivicContext';
 
+import RepPage from './RepPage/RepPage';
 import Rep from './Rep'
 import RepNav from './RepNav';
 
@@ -12,12 +15,16 @@ import './Reps.scss'
 const Reps = (props) => {
 
     const googleCivicContext = useContext(GoogleCivicContext)
-    const { reps, searchAddress } = googleCivicContext;
+    const { reps, searchAddress } = googleCivicContext
     
+const params = useParams()
+
+
+console.log("PARAMS: " + JSON.stringify(params))
   console.log("reps.js reps: " + JSON.stringify(reps))
-  console.log("reps.js props: " + props.location.pathname.includes('/rep/'))
+  // console.log("reps.js props: " + props.location.pathname.includes('/rep/'))
   useEffect(() => {
-    console.log("reps.js match.params: " + JSON.stringify(props.match.params))
+    
   })
 
       if (reps.length < 3) {
@@ -28,26 +35,33 @@ const Reps = (props) => {
         )
       }
 
-      else if (props.location.pathname.includes('/rep/')) {
+      else if (params.hasOwnProperty('repname')) {
         return (   
+          <div className = "row Reps container-fluid">   
 
-          <div className="reps-container col-12 col-sm-5 ">    
-            <RepNav />
-            <div className="tab-content" id="myTabContent">
-              {/***COUNTRY LEVEL REPS***/}
-              <div className="tab-pane fade show active" id="national" role="tabpanel" aria-labelledby="national-tab">
-                {reps.filter(x => x.level === "country").map(rep => (<Rep key={rep.id} rep={rep}/>))}
-              </div>
-              {/*STATE LEVEL REPS*/}                  
-              <div className="tab-pane fade" id="state" role="tabpanel" aria-labelledby="state-tab">
-                {reps.filter(x => x.level == "administrativeArea1").map(rep => (<Rep key={rep.id} rep={rep}/>))}
-              {/*LOCAL LEVEL REPS*/}                  
-              </div>
-              <div className="tab-pane fade" id="local" role="tabpanel" aria-labelledby="local-tab">
-                {reps.filter(x => (x.level == "administrativeArea2" || x.level =="locality")).map(rep => (<Rep key={rep.id} rep={rep}/>))}
+            <div className="reps-container col-12 col-sm-5 ">    
+              <RepNav />
+              <div className="tab-content" id="myTabContent">
+                {/***COUNTRY LEVEL REPS***/}
+                <div className="tab-pane fade show active" id="national" role="tabpanel" aria-labelledby="national-tab">
+                  {reps.filter(x => x.level === "country").map(rep => (<Rep key={rep.id} rep={rep}/>))}
+                </div>
+                {/*STATE LEVEL REPS*/}                  
+                <div className="tab-pane fade" id="state" role="tabpanel" aria-labelledby="state-tab">
+                  {reps.filter(x => x.level == "administrativeArea1").map(rep => (<Rep key={rep.id} rep={rep}/>))}
+                {/*LOCAL LEVEL REPS*/}                  
+                </div>
+                <div className="tab-pane fade" id="local" role="tabpanel" aria-labelledby="local-tab">
+                  {reps.filter(x => (x.level == "administrativeArea2" || x.level =="locality")).map(rep => (<Rep key={rep.id} rep={rep}/>))}
+                </div>
               </div>
             </div>
+
+            <div class="col-sm-7">
+            <Outlet />
+            </div>
           </div>
+  
         )
       }
       else {
@@ -79,6 +93,8 @@ const Reps = (props) => {
                   </div>
                 </div>
             </div>
+
+
 
 
 
