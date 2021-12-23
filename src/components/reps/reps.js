@@ -8,7 +8,6 @@ import RepPage from './RepPage/RepPage';
 import Rep from './Rep'
 import RepNav from './RepNav';
 
-import { Route } from 'react-router';
 
 import './Reps.scss'
 

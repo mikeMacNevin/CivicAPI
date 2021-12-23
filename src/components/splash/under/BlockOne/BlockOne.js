@@ -15,8 +15,7 @@ return (
                     <BlockOneContentCol />
                 </div>
                 <div className="col colTwo col-12 col-sm-7">
-
-                        <BlockOneAddressCol />
+                    <BlockOneAddressCol />
 
                 </div>
             </div>

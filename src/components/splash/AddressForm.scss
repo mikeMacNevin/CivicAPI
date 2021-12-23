@@ -1,144 +1,119 @@
-$lightpurp: rgb(152,158,199);
-$blue: rgb(95,138,232);
-$green: rgb(63,73,65);
-$darkpurp: rgb(95,103,145);
-$black: rgb(7,11,23);
-$red: #5E0B15;    
-$courier: 'Courier New', Courier, monospace !important;
-$sans: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+@import '../../assets/global.scss';
 
 
 .address-form {
-
     ::placeholder {
-
+        color: $black !important;
+    }
+    .form-inline {
+        padding-top:1rem;
+        padding-bottom: 1rem;
+        align-items:flex-start;
+    }
+    .no-address-form {
+        padding-top:6rem;
+        padding-bottom: 6px;
+    }
+    h1, h2 {
+        text-align: center;
+        font-family: $courier;
+        margin-bottom:0;
+        line-height:0.8;
+        font-size: 3rem;
+    }
+    h1 {
         color: white;
+        font-size: 4rem;
     }
-    // margin-top:18rem;
-    margin-bottom:2rem;
+    .home-address {
+        // align-self: left;
+        // text-align: left;
+        width: 100%;
+    }
+    h2 {
+        align-self: left;
+        color: $black !important;
+        margin-top:1rem;
+        font-size: 2rem;
+        color:$blue;
+        padding-left:4px;
+    }
+    #addressInput {
+        font-family: $sans;
+    }
+    input {
+        // text-align: center;
+    }
+    .form-group-one {
+        justify-content: flex-start;
+        flex-basis: 70%;
+        flex-wrap: nowrap;
+    }
+    .form-group-two {
+        margin-top:-1px;
 
-
-        .form-inline {
-
-            padding-top:1rem;
-            align-items:flex-start;
-        }
-
-        .no-address-form {
-            padding-top:6rem;
-            padding-bottom: 6px;
-        }
-        
-        h1, h2 {
-            text-align: center;
-            font-family: $courier;
-            margin-bottom:0;
-            line-height:0.8;
-            font-size: 3rem;
-        }
-        h1 {
-            color: white;
-            font-size: 4rem;
-        }
-        .home-address {
-            // align-self: left;
-            // text-align: left;
-            width: 100%;
-        }
-        h2 {
-            align-self: left;
-            color: $black !important;
-            margin-top:1rem;
-            font-size: 2rem;
-            color:$blue;
-            padding-left:4px;
-
-        }
-        #addressInput {
-            font-family: $sans;
-        }
+    }
+    .form-control {
+        background-color: rgba(255,255,255,0.9);
+        color: $black !important;
+        border-color: rgba(255,255,255, 0.8);
+        width:100%;           
+    }
+    .form-control::placeholder {
+        color: rgba(256, 256, 256, 0.4);
+        font-size:1rem;
+        font-weight:100;
+        font-family: $sans;
+    }
+    .search-div {
+        text-align: center;
+    }
+    button {
+        bottom: 2px;
+        border-color: white;
+        width:100%;
+        border-color: rgba(255,255,255, 0.6);
+        background-color: $blue;
+        transition: 0.5s;
+        font-family:$sans;
         input {
-            // text-align: center;
-        }
-
-        .form-group-one {
-            justify-content: flex-start;
-            flex-basis: 70%;
-            flex-wrap: nowrap;
-        }
-        .form-group-two {
-            margin-top:-1px;
-
-        }
-        .form-control {
-            background-color: rgba(255,255,255,0.0);
-            color: white !important;
-            border-color: rgba(255,255,255, 0.8);
-            width:100%;        
-            
-        }
-        .form-control::placeholder {
-            color: rgba(256, 256, 256, 0.4);
-            font-size:1.2rem;
-            font-weight:100;
-            font-family: $sans;
-        }
-
-
-        .search-div {
-            text-align: center;
-        }
-        button {
-            bottom: 2px;
-            border-color: white;
-            width:100%;
-            border-color: rgba(255,255,255, 0.6);
+            background-color: transparent;
             background-color: $blue;
+            border: none;
+            color: white ;
             transition: 0.5s;
-            font-family:$sans;
-            input {
-                background-color: transparent;
-                background-color: $blue;
-            
-                border: none;
-                color: white ;
-                transition: 0.5s;
-
-            }
         }
+    }
+    .btn-primary {
+        background-color: $blue;
+    }
+    button:active, button:hover {
+        border-color: $red;
+        input {
+            color:$red;
+        }
+    }
+}
+@media screen and (max-width: 576px) {
+    .address-form {
+        width:100%;
         .btn-primary {
-            background-color: $blue;
-        }
-        button:active, button:hover {
-            border-color: $red;
-            input {
-                color:$red;
+            padding-left:6px;
+            padding-right:6px;
 
-            }
         }
     }
-
-    @media screen and (max-width: 576px) {
-        .address-form {
-            width:100%;
-
-            .btn-primary {
-                padding-left:6px;
-                padding-right:6px;
-
-            }
+}
+@media screen and (max-width: 360px) {
+    .address-form {
+        .form-inline {
+            padding-bottom:0.6rem;
+        }
+        .form-group-one {
+        button.btn {
+            padding-left:6px;
+            padding-right:6px;
+        }
         }
     }
-
-
-
-    @media screen and (max-width: 360px) {
-        .address-form {
-            .form-group-one {
-            button.btn {
-                padding-left:6px;
-                padding-right:6px;
-            }
-            }
-        }
-    }
+}
