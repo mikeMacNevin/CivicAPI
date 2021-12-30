@@ -8,12 +8,12 @@ const BlockThree = () => {
     return (
         <div className="BlockThree" id="BlockOne">
             <div className="row">
-                <div className="col colOne col-12 col-sm-6">
+                <div className="col colOne col-12 col-sm-5">
                     <div className="container">
                         <BlockThreeText></BlockThreeText>
                     </div>
                 </div>
-                <div className="col colTwo col-12 col-sm-6">
+                <div className="col colTwo col-12 col-sm-7">
                     <div>
                         <img src={photo} className="img-fluid"/>
                     </div>

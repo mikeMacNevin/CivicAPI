@@ -1,23 +1,18 @@
 import React, { Fragment, useEffect, useContext } from 'react';
 import { Outlet } from 'react-router-dom';
 import { useParams } from 'react-router';
-
 import GoogleCivicContext from '../../context/civic/googleCivicContext';
 
-import RepPage from './RepPage/RepPage';
 import Rep from './Rep'
 import RepNav from './RepNav';
-
 
 import './Reps.scss'
 
 const Reps = (props) => {
-
     const googleCivicContext = useContext(GoogleCivicContext)
     const { reps, searchAddress } = googleCivicContext
-    
+  
 const params = useParams()
-
 
 console.log("PARAMS: " + JSON.stringify(params))
   console.log("reps.js reps: " + JSON.stringify(reps))

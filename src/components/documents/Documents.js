@@ -2,7 +2,6 @@
 import './Documents.scss'
 import { Outlet } from 'react-router-dom';
 
-import Constitution from './constitution';
 
 import DocNav from './nav/DocNav';
 import DocumentPage from './DocumentPage';

@@ -15,7 +15,7 @@ function App() {
       <Routes>
             <Route path="/" element={<Splash/>}/>
             <Route path="reps" element= { <Reps/>}>
-              <Route path=":repname"element={<RepPage/>}/>
+              <Route path=":repname" element={<RepPage/>}/>
             </Route>
             <Route path="documents" element={ <Documents/>} >
               <Route path=":doc" element={<DocumentPage/>} />

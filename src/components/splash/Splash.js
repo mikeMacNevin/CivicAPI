@@ -11,7 +11,8 @@ const Splash = () => {
 
     const googleCivicContext = useContext(GoogleCivicContext)
     const { reps, searchAddress } = googleCivicContext;
-    if (reps.length < 2 ) {
+
+
         return (
 
             <Fragment>
@@ -34,13 +35,7 @@ const Splash = () => {
                 <UnderSplash />
             </Fragment>
         )
-    }
-    else {
-        return (
-            <div>
-            </div>
-        )
-    }
+
 }
 
 export default Splash;

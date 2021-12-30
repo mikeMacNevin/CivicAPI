@@ -1,10 +1,12 @@
 import Documents from "./Documents"
+import { useParams } from "react-router-dom";
 
 const DocumentPage = ( ) => {
+
+    const params = useParams();
+
     return (
-        <div>
-            DocumentPage
-        </div>
+        <div>Id: {params.doc}</div>
     )
 }
 

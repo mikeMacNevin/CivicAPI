@@ -6,7 +6,7 @@ import AddressForm from '../../AddressForm'
 const BlockOneAddressCol = () => {
     return (
         <div className="for-centering container">
-            <h2>Find your representatives</h2>
+            <h2>Your representatives</h2>
             <AddressForm />
             <p>Enter your home address to find your elected representatives.</p>
         {/*

@@ -11,13 +11,15 @@ const navigate = useNavigate();
     return (
         <div className="BlockThreeText">
             <h2>Grow your knowledge</h2>
-            <input type="button" onClick={toDocuments} value="Documents" />
-            <ul>
-                {/* <li><Link to="/documents">Constitution</Link></li>
-                <li></li>
-                <li></li> */}
+            <p><i>(coming soon)</i></p>
+            {/* TURN THIS BACK ON EVENTUALLY */}
 
-            </ul>
+
+            {/* <input type="button" onClick={toDocuments} value="Documents" /> */}
+
+
+            {/* TURN THIS BACK ON EVENTUALLY */}
+
         </div>
     )
 }

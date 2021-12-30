@@ -12,7 +12,7 @@ const UnderSplash = () => {
                 {/* <BlockTwo /> */}
                 <BlockThree />
 
-                <BlockTwo />
+                {/* <BlockTwo /> */}
             </div>
         </Fragment>
     )
