@@ -1,13 +1,18 @@
 import Documents from "./Documents"
 import { useParams } from "react-router-dom";
 
+import Constitution from "./docs/constitution";
 const DocumentPage = ( ) => {
 
     const params = useParams();
 
-    return (
-        <div>Id: {params.doc}</div>
-    )
+    if (params.doc == 'constitution') {
+        return (
+            <div><Constitution /></div>
+        )
+    }
+
+
 }
 
 export default DocumentPage

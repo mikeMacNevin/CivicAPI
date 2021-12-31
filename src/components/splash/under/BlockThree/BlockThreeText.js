@@ -15,7 +15,7 @@ const navigate = useNavigate();
             {/* TURN THIS BACK ON EVENTUALLY */}
 
 
-            {/* <input type="button" onClick={toDocuments} value="Documents" /> */}
+            <input type="button" onClick={toDocuments} value="Documents" />
 
 
             {/* TURN THIS BACK ON EVENTUALLY */}

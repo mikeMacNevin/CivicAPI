@@ -7,7 +7,7 @@ import DocNav from './nav/DocNav';
 import DocumentPage from './DocumentPage';
 const Documents = () => {
     return (
-        <div className="documents">
+        <div className="documents text-center">
             <h2>Documentss</h2>
             <DocNav></DocNav>
             <Outlet></Outlet>
@@ -15,4 +15,4 @@ const Documents = () => {
     )
 }
 
-export default Documents;
+export default Documents;   
