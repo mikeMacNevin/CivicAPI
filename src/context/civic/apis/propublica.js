@@ -11,7 +11,9 @@ export default async function proPublica(googleCivicData) {
         { 
         headers: { 
             // need to change eventually because I'm dumb and left public and is out there on internet somewhere....
-            'X-API-Key': 'xehBDsPnNx2F4CKjwq9spiSC6QZDZ5AWH7m9UQpM'
+            'X-API-Key': 'xehBDsPnNx2F4CKjwq9spiSC6QZDZ5AWH7m9UQpM',
+
+            // 'Access-Control-Allow-Origin': '*'
         }
     }).then(resp => {
         console.log("Da pro: " + JSON.stringify(resp))

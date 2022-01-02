@@ -1,7 +1,7 @@
 import Documents from "./Documents"
 import { useParams } from "react-router-dom";
 
-import Constitution from "./docs/constitution";
+import Constitution from "./docs/constitution/Constitution";
 const DocumentPage = ( ) => {
 
     const params = useParams();
