@@ -1,6 +1,6 @@
 
-import Preamble from "./sections/Preamble"
-import Articles from './sections/articles/Articles'
+import Preamble from "./parts/Preamble"
+import Articles from './parts/articles/Articles'
 import JsonData from './../../data/constitution.json'
 
 
