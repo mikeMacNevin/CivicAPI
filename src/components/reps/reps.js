@@ -31,9 +31,9 @@ console.log("PARAMS: " + JSON.stringify(params))
 
       else if (params.hasOwnProperty('repname')) {
         return (   
-          <div className = "row Reps container-fluid">   
+          <div className = "row Reps Reps-loaded container-fluid">   
 
-            <div className="reps-container col-12 col-sm-5 ">    
+            <div className="reps-container reps-container-done col-12 col-sm-5">    
               <RepNav />
               <div className="tab-content" id="myTabContent">
                 {/***COUNTRY LEVEL REPS***/}
@@ -51,7 +51,7 @@ console.log("PARAMS: " + JSON.stringify(params))
               </div>
             </div>
 
-            <div class="col-sm-7">
+            <div class="col-sm-7 offset-sm-5 rep-display-done">
             <Outlet />
             </div>
           </div>
@@ -60,7 +60,7 @@ console.log("PARAMS: " + JSON.stringify(params))
       }
       else {
         return (   
-          <div className = "row Reps container-fluid">   
+          <div className = "row Reps container">   
 
 
             <div className="reps-intro col-12 col-sm-7 d-flex flex-column  justify-content-center">

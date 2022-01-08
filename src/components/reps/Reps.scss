@@ -28,3 +28,30 @@
             font-size: 14px;
         }
     }
+
+
+@media screen and (min-width: 576px) {
+    .reps-container-done {
+        position: fixed;
+        top:0; 
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .reps-container-done {
+        padding-top: 1%;
+        .Rep {
+            margin-top:10px !important
+        }
+    }
+}
+
+    /* once a rep has been selected */
+    // .Reps-loaded {
+    //     justify-content: flex-end;
+    //     .reps-container-done {
+    //         position: fixed;
+    
+    
+    //     }
+    // }

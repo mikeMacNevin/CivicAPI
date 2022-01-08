@@ -5,7 +5,7 @@ const Articles = () => {
     
     return(
         <div>
-        <ul class="nav nav-tabs" id="articleTab" role="tablist">
+        <ul class="nav nav-tabs justify-content-center" id="articleTab" role="tablist">
             <li class="nav-item">
                 <a class="nav-link active" id="home-tab" data-toggle="tab" href="#article1" role="tab" aria-controls="article1" aria-selected="true">I</a>
             </li>

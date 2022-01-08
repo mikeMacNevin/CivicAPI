@@ -25,7 +25,7 @@ const Documents = () => {
     //need to refactor to check if param past documents/ exists 
     if (currentParam.doc === "constitution") {
         return (
-            <div className="documents text-center container">
+            <div className="documents text-center container-fluid">
                <DocNav></DocNav>
                 <Outlet></Outlet>
             </div>  
@@ -34,7 +34,7 @@ const Documents = () => {
 
     else {
         return (
-            <div className="documents text-center container">
+            <div className="documents text-center container-fluid">
                 <h2>US Government Documents</h2>
                 <DocNav></DocNav>
                 <Outlet></Outlet>
