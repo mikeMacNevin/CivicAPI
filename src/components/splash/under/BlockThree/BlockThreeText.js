@@ -11,14 +11,14 @@ const navigate = useNavigate();
     return (
         <div className="BlockThreeText">
             <h2>Grow your knowledge</h2>
-            <p><i>(coming soon)</i></p>
+            {/* <p><i>(coming soon)</i></p> */}
             {/* TURN THIS BACK ON EVENTUALLY */}
 
 
-            <input type="button" onClick={toDocuments} value="Documents" />
+            <input type="submit" className=" btn btn-primary" onClick={toDocuments} value="Documents" />
+ 
 
-
-            {/* TURN THIS BACK ON EVENTUALLY */}
+                {/*< TURN THIS BACK ON EVENTUALLY */}
 
         </div>
     )

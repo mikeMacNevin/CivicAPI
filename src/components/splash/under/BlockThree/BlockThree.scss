@@ -4,11 +4,25 @@
 
 
 .BlockThree {
-    background-color: $black;
+    background-color: $red;
     color:white;
 
     .BlockThreeText {
+    text-align: right;
     padding-top:10%;
+
+
+
+        input {
+            background-color: transparent;
+            background-color: $blue;
+            border: none;
+            color: white ;
+            transition: 0.5s;
+            font-family:$sans;
+            border-color: rgba(255,255,255, 0.6);
+
+        }
 
 
     h2 {

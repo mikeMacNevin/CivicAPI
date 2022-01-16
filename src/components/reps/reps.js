@@ -31,7 +31,8 @@ console.log("PARAMS: " + JSON.stringify(params))
 
       else if (params.hasOwnProperty('repname')) {
         return (   
-          <div className = "row Reps Reps-loaded container-fluid">   
+          <div className="container-fluid">
+          <div className = "row Reps Reps-loaded">   
 
             <div className="reps-container reps-container-done col-12 col-sm-5">    
               <RepNav />
@@ -55,12 +56,13 @@ console.log("PARAMS: " + JSON.stringify(params))
             <Outlet />
             </div>
           </div>
-  
+          </div>
         )
       }
       else {
         return (   
-          <div className = "row Reps container">   
+
+          <div className = "row Reps container-fluid">   
 
 
             <div className="reps-intro col-12 col-sm-7 d-flex flex-column  justify-content-center">

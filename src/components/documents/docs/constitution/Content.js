@@ -2,7 +2,8 @@
 import Preamble from "./parts/Preamble"
 import Articles from './parts/articles/Articles'
 import JsonData from './../../data/constitution.json'
-
+import Signatories from "./parts/signatories/Signatories"
+import SectionText from "./parts/articles/SectionText"
 
 const Content = () => {
     return (
@@ -14,7 +15,7 @@ const Content = () => {
             <Articles />
             </div>
             <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-            Signatories
+            <Signatories />
             </div>
             <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
             Amendments

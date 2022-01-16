@@ -2,13 +2,16 @@
 
 
 .address-form {
+    display:flex;
+    justify-content: center;
     ::placeholder {
         color: $black !important;
     }
     .form-inline {
         padding-top:1rem;
         padding-bottom: 1rem;
-        align-items:flex-start;
+        width: 100%;
+        justify-content: center;
     }
     .no-address-form {
         padding-top:6rem;
@@ -55,7 +58,7 @@
     }
     .form-control {
         background-color: rgba(255,255,255,0.9);
-        color: $black !important;
+        color: rgba(0,0,0,0.1)!important;
         border-color: rgba(255,255,255, 0.8);
         width:100%;           
     }
@@ -68,17 +71,22 @@
     .search-div {
         text-align: center;
     }
+    a:not([href]):not([tabindex]) {
+        color: rgba(0,0,0,0.1) !important;
+    }
     button {
         bottom: 2px;
         border-color: white;
         width:100%;
         border-color: rgba(255,255,255, 0.6);
-        background-color: $blue;
+        background-color: $blue !important;
         transition: 0.5s;
         font-family:$sans;
+        color: rgba(0,0,0,0.1)!important;
+        font-weight: bold !important;
+
         input {
             background-color: transparent;
-            background-color: $blue;
             border: none;
             color: white ;
             transition: 0.5s;
@@ -89,6 +97,7 @@
     }
     button:active, button:hover {
         border-color: $red;
+        background-color: $white !important;
         input {
             color:$red;
         }
