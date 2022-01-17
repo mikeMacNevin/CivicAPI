@@ -23,10 +23,15 @@ return (
 
 
     <Fragment>
-        <div className="BlockTwo">
-            <div className="BlockTwoText">
-                <h2>View Upcoming Elections</h2>
-                <h4>(Coming Soon)</h4>
+        <div className="BlockTwo" id="BlockTwo">
+            <div className="row">
+            <div className="col colOne col-12 col-sm-5 col-md-6">
+                    <BlockTwoImageCol />
+                </div>
+                <div className="col colTwo col-12 col-sm-7 col-md-6 d-flex flex-column justify-content-center ">
+                    <BlockTwoTextCol />
+                </div>
+
 
             </div>
         </div>

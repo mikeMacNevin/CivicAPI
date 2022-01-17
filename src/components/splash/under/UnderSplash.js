@@ -8,11 +8,10 @@ const UnderSplash = () => {
     return (
         <Fragment>
             <div> 
-                <BlockOne />
-                {/* <BlockTwo /> */}
+                <BlockTwo />
                 <BlockThree />
+                {/* <BlockOne /> */}
 
-                {/* <BlockTwo /> */}
             </div>
         </Fragment>
     )

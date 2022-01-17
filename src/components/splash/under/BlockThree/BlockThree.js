@@ -8,7 +8,7 @@ const BlockThree = () => {
     return (
         <div className="BlockThree" id="BlockOne">
             <div className="row">
-                <div className="col colOne col-12 col-sm-5 col-md-6">
+                <div className="col colOne col-12 col-sm-5 col-md-6 d-flex flex-column justify-content-center">
                     <div className="container">
                         <BlockThreeText></BlockThreeText>
                     </div>

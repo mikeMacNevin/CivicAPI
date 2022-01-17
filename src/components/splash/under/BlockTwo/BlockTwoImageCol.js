@@ -1,13 +1,14 @@
-import { Fragment } from "react"
-import './BlockTwo.scss';
 
-import photo from  '../../../../assets/voting_booths.jpeg'
+import React, {Fragment} from 'react'
+import photo from '../../../../assets/phone.png'
+
+
 
 const BlockTwoImageCol = () => {
     return (
-    <div className="content-col">
-        <img src={photo} className="img-fluid"/>
-    </div>
+        <div className="content-col">
+            <img src={photo} className="img-fluid"/>
+        </div>
     )
 }
 

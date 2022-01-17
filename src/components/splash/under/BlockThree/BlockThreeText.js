@@ -15,7 +15,7 @@ const navigate = useNavigate();
             {/* TURN THIS BACK ON EVENTUALLY */}
 
 
-            <input type="submit" className=" btn btn-primary" onClick={toDocuments} value="Documents" />
+            <input type="submit" className=" btn btn-primary" onClick={toDocuments} value="View Documents" />
  
 
                 {/*< TURN THIS BACK ON EVENTUALLY */}
