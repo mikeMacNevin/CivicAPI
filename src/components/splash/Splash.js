@@ -41,7 +41,9 @@ const Splash = () => {
                         {/* <AddressForm /> */}
                     </div>
                 </div>
-                <UnderSplash />
+
+                {/* Taking Out 1/30/22*/}
+                {/* <UnderSplash /> */}
             </Fragment>
         )
 

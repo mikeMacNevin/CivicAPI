@@ -10,7 +10,7 @@
     .form-inline {
         padding-top:1rem;
         padding-bottom: 1rem;
-        width: 100%;
+        width: 60%;
         justify-content: center;
     }
     .no-address-form {
@@ -106,6 +106,9 @@
 @media screen and (max-width: 576px) {
     .address-form {
         width:100%;
+        .form-inline {
+            width: 100%;
+        }
         .btn-primary {
             padding-left:6px;
             padding-right:6px;

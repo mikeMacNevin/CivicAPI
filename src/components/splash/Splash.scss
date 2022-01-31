@@ -21,11 +21,13 @@
 
 .SplashImage{
     .mask-layer {
-        background-color: rgba(1,1,1,0.8);
+        background-color: rgba(1,1,1,0.6);
+        min-height: 100vh;
+        padding-top:3rem;
     }
     h1 {
         font-size: 4rem;
-        padding-top: 3rem;
+        padding-top: 4rem;
         font-family: 'Courier New', Courier, monospace;
         margin-bottom: 0;
         line-height: 95%;
@@ -35,7 +37,7 @@
     }
     ul {
         padding-bottom: 1.3rem;
-        padding-right:2rem;
+        padding-right: 1rem;
         border-radius: 5px;
         color: $red;
         font-size: 1.1rem;
@@ -48,7 +50,7 @@
 
     }
 
-    min-height: 70vh;
+    min-height: 100vh;
     min-width: 100%;
     background:  url('/assets/congress.jpg') hsla(280, 77%, 41%, 0.8);
     background-position: center;
@@ -79,6 +81,13 @@
     }
 }
 
-
+@media screen and (max-width: 576px) {
+    .SplashImage {
+        // min-height: 80vh;
+        .mask-layer {
+            // min-height: 80vh;
+        }
+    }
+}
 
 

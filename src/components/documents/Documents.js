@@ -7,6 +7,8 @@ import DocNav from './nav/DocNav';
 import DocumentPage from './DocumentPage';
 import { useEffect, useState } from 'react';
 
+import Nav from '../nav/Nav';
+
 const Documents = () => {
 
     const params = useParams();
@@ -26,6 +28,7 @@ const Documents = () => {
     if (currentParam.doc === "constitution") {
         return (
             <div className="documents text-center container-fluid">
+                <Nav/>
                <DocNav></DocNav>
                 <Outlet></Outlet>
             </div>  
@@ -35,6 +38,8 @@ const Documents = () => {
     else {
         return (
             <div className="documents text-center container-fluid">
+                                <Nav/>
+
                 <h2>US Government Documents</h2>
                 <DocNav></DocNav>
                 <Outlet></Outlet>
